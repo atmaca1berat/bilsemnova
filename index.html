@@ -195,12 +195,12 @@ footer a:hover{color:var(--metin2)}
         </p>
         <div class="butonlar">
           <a class="btn btn-app" href="https://apps.apple.com/app/id6792328680"
-             onclick="indirTikla('app_store')">
+             onclick=\"indirTikla('app_store', event)\">
              <span>&#63743;</span>
              <span>İndir<small>APP STORE</small></span>
           </a>
           <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.bilsemnova.app"
-             onclick="indirTikla('play_store')">
+             onclick=\"indirTikla('play_store', event)\">
              <span>&#9654;</span>
              <span>İndir<small>GOOGLE PLAY</small></span>
           </a>
@@ -301,11 +301,11 @@ footer a:hover{color:var(--metin2)}
     <p class="bolum-alt">İndirin, çocuğunuzla birlikte ilk testi çözün — beğenmezseniz bir şey kaybetmezsiniz.</p>
     <div class="butonlar">
       <a class="btn btn-app" href="https://apps.apple.com/app/id6792328680"
-         onclick="indirTikla('app_store_alt')">
+         onclick=\"indirTikla('app_store_alt', event)\">
          <span>&#63743;</span><span>Ücretsiz İndir<small>APP STORE</small></span>
       </a>
       <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.bilsemnova.app"
-         onclick="indirTikla('play_store_alt')">
+         onclick=\"indirTikla('play_store_alt', event)\">
          <span>&#9654;</span><span>Ücretsiz İndir<small>GOOGLE PLAY</small></span>
       </a>
     </div>
@@ -347,8 +347,12 @@ footer a:hover{color:var(--metin2)}
   k.innerHTML = s;
 })();
 // İndir tıklamasını Meta'ya bildir (yalnızca onay verildiyse piksel yüklüdür)
-function indirTikla(kaynak){
-  try{ if(window.fbq) fbq('track','Lead',{content_name:'indir_'+kaynak}); }catch(e){}
+function indirTikla(kaynak, olay){
+  if (!window.fbq) return;
+  try{ fbq('track','Lead',{content_name:'indir_'+kaynak}); }catch(e){}
+  // Bildirim mağazaya geçmeden gitsin diye çok kısa bekle
+  var a = olay && olay.currentTarget;
+  if (a && a.href) { olay.preventDefault(); setTimeout(function(){ location.href = a.href; }, 350); }
 }
 
 // Çerez bandı: tercih yoksa gösterilir; "Reddet" "Kabul et" kadar kolaydır.
