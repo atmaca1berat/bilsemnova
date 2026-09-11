@@ -25,6 +25,7 @@ function pikselYukle(){
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window,document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('set', 'autoConfig', false, PIKSEL_KIMLIGI); // Meta'nın otomatik düğme/sayfa verisi toplamasını kapat
   fbq('init', PIKSEL_KIMLIGI);
   fbq('track', 'PageView');
 }
@@ -195,12 +196,12 @@ footer a:hover{color:var(--metin2)}
         </p>
         <div class="butonlar">
           <a class="btn btn-app" href="https://apps.apple.com/app/id6792328680"
-             onclick=\"indirTikla('app_store', event)\">
+             onclick="indirTikla('app_store', event)">
              <span>&#63743;</span>
              <span>İndir<small>APP STORE</small></span>
           </a>
           <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.bilsemnova.app"
-             onclick=\"indirTikla('play_store', event)\">
+             onclick="indirTikla('play_store', event)">
              <span>&#9654;</span>
              <span>İndir<small>GOOGLE PLAY</small></span>
           </a>
@@ -301,11 +302,11 @@ footer a:hover{color:var(--metin2)}
     <p class="bolum-alt">İndirin, çocuğunuzla birlikte ilk testi çözün — beğenmezseniz bir şey kaybetmezsiniz.</p>
     <div class="butonlar">
       <a class="btn btn-app" href="https://apps.apple.com/app/id6792328680"
-         onclick=\"indirTikla('app_store_alt', event)\">
+         onclick="indirTikla('app_store_alt', event)">
          <span>&#63743;</span><span>Ücretsiz İndir<small>APP STORE</small></span>
       </a>
       <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.bilsemnova.app"
-         onclick=\"indirTikla('play_store_alt', event)\">
+         onclick="indirTikla('play_store_alt', event)">
          <span>&#9654;</span><span>Ücretsiz İndir<small>GOOGLE PLAY</small></span>
       </a>
     </div>
