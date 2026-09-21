@@ -44,6 +44,7 @@ TR = timezone(timedelta(hours=3))
 MB = 1024 * 1024
 # Hız sınırı (4, 17, 32, 613, 80001, 80002) ya da geçersiz token (190): çalışma durur, deneme sayılmaz.
 DURDURAN_KODLAR = {4, 17, 32, 613, 80001, 80002, 190}
+ETIKET_SINIRI = 5  # Instagram artık gönderi başına 5 etikete izin veriyor
 
 # ── Gizlilik ─────────────────────────────────────────────────────────────
 _gizliler: set[str] = set()
@@ -623,8 +624,9 @@ def _oge_denetle(oge: object, kok: Path):
         yield True, 'hikâyede metin boş olmalı (hikâyeye açıklama eklenemez)'
     if ig and len(metin) > 2200:
         yield True, f'metin {len(metin)} karakter; Instagram sınırı 2200'
-    if ig and len(re.findall(r'#\w', metin)) > 30:
-        yield True, 'Instagram en çok 30 etiket (#) kabul eder'
+    etiket = len(re.findall(r'#\w', metin))
+    if ig and etiket > ETIKET_SINIRI:
+        yield True, f'{etiket} etiket var; Instagram gönderi başına en fazla {ETIKET_SINIRI} etikete izin veriyor'
     if ig and len(re.findall(r'@\w', metin)) > 20:
         yield True, 'Instagram en çok 20 @bahsetme kabul eder'
     medya, kapak = oge.get('medya'), oge.get('kapak')

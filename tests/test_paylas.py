@@ -510,15 +510,16 @@ class KomutSatiriTest(unittest.TestCase):
             oge('k', tur='video', medya=[dogru]),  # bilinmeyen tür
             oge('l', medya=[dogru], platformlar=['twitter']),  # bilinmeyen platform
             oge('m', medya=['paylasim/medya/kare.jpg']),  # diskte Kare.jpg; GitHub Pages harf duyarlı
+            oge('n', medya=[dogru], metin='Günün sorusu #a #b #c #d #e #f'),  # 5'ten fazla etiket
         ])
         self.medya('paylasim/medya/Kare.jpg', sahte_jpeg(1080, 1080))
         kod, cikti = self.main('--dogrula')
         self.assertEqual(kod, 1)
         hatali = {satir.split()[1].rstrip(':') for satir in cikti.splitlines() if satir.startswith('HATA')}
-        self.assertEqual(hatali, set('abcdefghijklm'))
+        self.assertEqual(hatali, set('abcdefghijklmn'))
         for parca in ('id tekrar ediyor', 'saat dilimli', '4:5 ile 1.91:1', 'hikâye 9:16', 'bulunamadı',
                       'MP4 olmalı', 'faststart', '3-90 sn', '1-10 medya', 'metin boş', 'tur gonderi', 'platformlar',
-                      'büyük/küçük harf'):
+                      'büyük/küçük harf', 'en fazla 5 etiket'):
             self.assertIn(parca, cikti)
 
     def test_dogrula_gecerli_takvim(self):
