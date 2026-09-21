@@ -1,0 +1,83 @@
+# BilsemNova: paylasim/takvim.json'daki zamanı gelmiş gönderileri Instagram'a ve Facebook Sayfası'na
+# paylaşır, sonucu paylasim/durum.json'a yazıp depoya geri gönderir. Kurulum: KURULUM.md
+# Secret: META_TOKEN · Variables: IG_KULLANICI_ID, FB_SAYFA_ID (isteğe bağlı: FB_HIKAYE, FB_REELS,
+# GRAPH_SURUM, SITE_KOKU)
+name: Sosyal medya paylaşımı
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'  # çeyrek saatte bir (UTC); saat başındaki yoğunluktan kaçınır
+  workflow_dispatch:
+    inputs:
+      islem:
+        description: 'kontrol: salt okuma bağlantı testi · kuru: istek atmadan ne yapacağını yazar · paylas: gerçek paylaşım'
+        type: choice
+        options: [kontrol, kuru, paylas]
+        default: kontrol
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sosyal-medya-paylasim
+  cancel-in-progress: false
+
+jobs:
+  paylas:
+    # Yalnız varsayılan dal: başka dalın eski durum.json'u gönderileri ikileyebilir.
+    if: github.event_name == 'schedule' || github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # Olay anındaki commit değil dalın son hâli: kuyrukta bekleyen çalışma da güncel durum.json'u görür.
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Paylaş
+        timeout-minutes: 25
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_KULLANICI_ID: ${{ vars.IG_KULLANICI_ID }}
+          FB_SAYFA_ID: ${{ vars.FB_SAYFA_ID }}
+          SITE_KOKU: ${{ vars.SITE_KOKU }}
+          GRAPH_SURUM: ${{ vars.GRAPH_SURUM }}
+          FB_HIKAYE: ${{ vars.FB_HIKAYE }}
+          FB_REELS: ${{ vars.FB_REELS }}
+        run: |
+          cp paylasim/durum.json "$RUNNER_TEMP/once.json" 2>/dev/null || echo '{}' > "$RUNNER_TEMP/once.json"
+          case "${{ inputs.islem }}" in
+            kontrol) python paylasim/paylas.py --kontrol ;;
+            kuru)    python paylasim/paylas.py --kuru ;;
+            *)       python paylasim/paylas.py ;;  # zamanlanmış çalışma ya da elle "paylas"
+          esac
+
+      - name: durum.json'u kaydet
+        if: always()  # paylaşım adımı hata verse de o ana dek yapılanlar kaydedilsin
+        run: |
+          if [ ! -f "$RUNNER_TEMP/once.json" ] || [ ! -f paylasim/durum.json ] \
+             || cmp -s "$RUNNER_TEMP/once.json" paylasim/durum.json; then
+            echo "durum.json değişmedi."
+            exit 0
+          fi
+          cp paylasim/durum.json "$RUNNER_TEMP/sonra.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Her denemede dalın en güncel hâli alınır, bu çalışmanın kayıtları onun durum.json'unun üstüne
+          # uygulanır: elle yapılan değişiklikler korunur, çakışma olmaz, izlenmeyen dosya da eklenir.
+          for deneme in 1 2 3 4 5; do
+            if git fetch origin "$GITHUB_REF_NAME" && git reset --hard FETCH_HEAD \
+               && python paylasim/paylas.py --birlestir "$RUNNER_TEMP/once.json" "$RUNNER_TEMP/sonra.json" \
+               && git add paylasim/durum.json \
+               && { git diff --cached --quiet || git commit -m 'chore(social): update publishing status'; } \
+               && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            sleep $((deneme * 10))
+          done
+          echo "::error::durum.json gönderilemedi; düzeltilmezse sonraki çalışma aynı gönderileri yeniden paylaşabilir."
+          exit 1
