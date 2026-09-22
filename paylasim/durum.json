@@ -1,45 +1,17 @@
 {
-  "2026-09-22-akis": {
-    "facebook": {
-      "deneme": 3,
-      "durum": "hata",
-      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T21:01:00+03:00"
-    },
-    "instagram": {
-      "deneme": 3,
-      "durum": "hata",
-      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T21:01:00+03:00"
-    }
+ "2026-09-22-hikaye-1": {
+  "facebook": {
+   "deneme": 1,
+   "durum": "tamam",
+   "medya_id": "1346075820690676",
+   "zaman": "2026-09-22T09:20:49+03:00"
   },
-  "2026-09-22-hikaye-1": {
-    "facebook": {
-      "deneme": 1,
-      "durum": "tamam",
-      "medya_id": "1346075820690676",
-      "zaman": "2026-09-22T09:20:49+03:00"
-    },
-    "instagram": {
-      "deneme": 1,
-      "durum": "tamam",
-      "konteyner": "18164499793487029",
-      "medya_id": "18029397908680875",
-      "zaman": "2026-09-22T09:20:43+03:00"
-    }
-  },
-  "2026-09-22-hikaye-2": {
-    "facebook": {
-      "deneme": 3,
-      "durum": "hata",
-      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T22:00:57+03:00"
-    },
-    "instagram": {
-      "deneme": 3,
-      "durum": "hata",
-      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T22:00:57+03:00"
-    }
+  "instagram": {
+   "deneme": 1,
+   "durum": "tamam",
+   "konteyner": "18164499793487029",
+   "medya_id": "18029397908680875",
+   "zaman": "2026-09-22T09:20:43+03:00"
   }
+ }
 }
