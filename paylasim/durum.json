@@ -1,16 +1,16 @@
 {
   "2026-09-22-akis": {
     "facebook": {
-      "deneme": 2,
-      "durum": "tekrar",
+      "deneme": 3,
+      "durum": "hata",
       "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T20:45:33+03:00"
+      "zaman": "2026-09-22T21:01:00+03:00"
     },
     "instagram": {
-      "deneme": 2,
-      "durum": "tekrar",
+      "deneme": 3,
+      "durum": "hata",
       "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
-      "zaman": "2026-09-22T20:45:33+03:00"
+      "zaman": "2026-09-22T21:01:00+03:00"
     }
   },
   "2026-09-22-hikaye-1": {
