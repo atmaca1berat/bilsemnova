@@ -27,5 +27,19 @@
       "medya_id": "18029397908680875",
       "zaman": "2026-09-22T09:20:43+03:00"
     }
+  },
+  "2026-09-22-hikaye-2": {
+    "facebook": {
+      "deneme": 1,
+      "durum": "tekrar",
+      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
+      "zaman": "2026-09-22T21:30:45+03:00"
+    },
+    "instagram": {
+      "deneme": 1,
+      "durum": "tekrar",
+      "son_hata": "HTTP 400: API access blocked. (kod 200, alt kod None)",
+      "zaman": "2026-09-22T21:30:45+03:00"
+    }
   }
 }
