@@ -1,0 +1,84 @@
+---
+// Çerez izni, Meta pikseli, "İndir" tıklaması (Lead) ve kampanya etiketlerinin mağazaya taşınması.
+// Eski tek sayfalık sitedeki davranışın aynısı; tek fark, kampanya bilgisi oturum boyunca saklanır,
+// böylece ziyaretçi başka sayfaya geçip oradan indirse de kaynak kaybolmaz.
+import { SITE } from '../data/site';
+---
+<div id="cerez" class="cerez" role="dialog" aria-live="polite" aria-label="Çerez tercihi" hidden>
+  <p>
+    Reklamlarımızın işe yarayıp yaramadığını ölçmek için, onay verirseniz Meta pikseli kullanıyoruz.
+    <a href={SITE.gizlilikSite}>Ayrıntılar</a>
+  </p>
+  <div class="cerez-dugmeler">
+    <button type="button" class="dugme ikincil" data-cerez="red">Reddet</button>
+    <button type="button" class="dugme ana" data-cerez="kabul">Kabul et</button>
+  </div>
+</div>
+
+<script is:inline define:vars={{ piksel: SITE.pikselKimligi }}>
+  (function () {
+    function pikselYukle() {
+      if (window.fbq) return;
+      !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('set', 'autoConfig', false, piksel); // Meta'nın otomatik düğme/sayfa verisi toplamasını kapat
+      fbq('init', piksel);
+      fbq('track', 'PageView');
+    }
+    var bant = document.getElementById('cerez');
+    var tercih = null;
+    try { tercih = localStorage.getItem('bn_cerez'); } catch (e) {}
+    if (tercih === 'kabul') pikselYukle();
+    else if (!tercih && bant) bant.hidden = false;
+
+    function tercihKaydet(kabul) {
+      try { localStorage.setItem('bn_cerez', kabul ? 'kabul' : 'red'); } catch (e) {}
+      if (bant) bant.hidden = true;
+      if (kabul) pikselYukle();
+      else if (window.fbq) { try { fbq('consent', 'revoke'); } catch (e) {} }
+    }
+    document.addEventListener('click', function (olay) {
+      var hedef = olay.target instanceof Element ? olay.target : null;
+      if (!hedef) return;
+      var secim = hedef.closest('[data-cerez]');
+      if (secim) { tercihKaydet(secim.getAttribute('data-cerez') === 'kabul'); return; }
+      if (hedef.closest('[data-cerez-ac]')) { olay.preventDefault(); if (bant) bant.hidden = false; return; }
+      // Mağaza düğmesi: onay verildiyse Lead bildir, bildirim gitsin diye kısa bekle
+      var baglanti = hedef.closest('a[data-kaynak]');
+      if (baglanti && window.fbq) {
+        try { fbq('track', 'Lead', { content_name: 'indir_' + baglanti.getAttribute('data-kaynak') }); } catch (e) {}
+        olay.preventDefault();
+        var adres = baglanti.href;
+        setTimeout(function () { location.href = adres; }, 350);
+      }
+    });
+
+    // Reklamdan gelen ziyaretçinin kaynağını Google Play bağlantısına taşı (oturum boyunca).
+    function sade(x) { return String(x || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); }
+    var q = new URLSearchParams(location.search);
+    var kampanya = null;
+    if (q.get('utm_source')) {
+      kampanya = { k: sade(q.get('utm_source')), t: sade(q.get('utm_medium')) || 'reklam', c: sade(q.get('utm_campaign')) || 'genel' };
+      try { sessionStorage.setItem('bn_kampanya', JSON.stringify(kampanya)); } catch (e) {}
+    } else {
+      try { kampanya = JSON.parse(sessionStorage.getItem('bn_kampanya') || 'null'); } catch (e) {}
+    }
+    if (kampanya && kampanya.k) {
+      var referrer = encodeURIComponent('utm_source=' + kampanya.k + '&utm_medium=' + kampanya.t + '&utm_campaign=' + kampanya.c);
+      document.querySelectorAll('a[href*="play.google.com"]').forEach(function (a) {
+        a.href = 'https://play.google.com/store/apps/details?id=com.bilsemnova.app&referrer=' + referrer;
+      });
+    }
+  })();
+</script>
+
+<style>
+  .cerez {
+    position: fixed; z-index: 80; left: 16px; right: 16px; bottom: 16px; margin-inline: auto; max-width: 720px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding: 18px 20px;
+    background: var(--uzay-2); border: 1px solid var(--cizgi); border-radius: var(--r); box-shadow: var(--golge-kart);
+  }
+  .cerez[hidden] { display: none; }
+  .cerez p { flex: 1 1 320px; color: var(--metin-2); font-size: 0.95rem; }
+  .cerez-dugmeler { display: flex; gap: 10px; }
+  .cerez .dugme { padding: 12px 18px; font-size: 0.98rem; }
+</style>

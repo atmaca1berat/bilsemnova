@@ -1,0 +1,66 @@
+---
+import Temel from '../../layouts/Temel.astro';
+import { ALANLAR } from '../../data/kategoriler';
+import { konuBul } from '../../data/konular';
+
+const hazirSayisi = ALANLAR.flatMap((a) => a.kategoriler).filter((k) => k.hazir).length;
+---
+<Temel
+  baslik="BİLSEM Konu Anlatımları: Ücretsiz Slayt ve PDF | BilsemNova"
+  aciklama="BİLSEM'e hazırlık için ücretsiz konu anlatımları: kurallar, adım adım çözülmüş örnekler ve alıştırmalar. Web'de okuyun, slayt olarak açın ya da PDF indirin."
+>
+  <section class="kap bas">
+    <nav class="kirinti" aria-label="Konum"><a href="/">Ana sayfa</a> <span aria-hidden="true">›</span> <span>Konu Anlatımları</span></nav>
+    <span class="cip yesil">ÜCRETSİZ · SLAYT · PDF</span>
+    <h1>BİLSEM <span class="parlak">konu anlatımları</span></h1>
+    <p>
+      Uygulamadaki her soru türü için kurallar, adım adım çözülmüş örnekler ve alıştırmalar. Hepsi ücretsiz ve herkese açık:
+      web'de okuyabilir, derste slayt olarak açabilir ya da PDF olarak indirebilirsiniz.
+    </p>
+    <p class="durum">{hazirSayisi} konu yayında, diğerleri sırayla ekleniyor.</p>
+  </section>
+
+  {ALANLAR.map((alan) => (
+    <section class="kap alan" style={`--alan-renk:${alan.renk}`}>
+      <h2>{alan.ad}</h2>
+      <div class="kartlar">
+        {alan.kategoriler.map((k) => {
+          const konu = k.hazir ? konuBul(k.slug) : undefined;
+          return konu ? (
+            <a class="kart hazir" href={`/konu-anlatimlari/${k.slug}/`}>
+              <h3>{k.ad}</h3>
+              <p>{k.aciklama}</p>
+              <span class="kart-alt">{konu.okumaDakika} dk okuma · Slayt · PDF</span>
+            </a>
+          ) : (
+            <div class="kart">
+              <h3>{k.ad}</h3>
+              <p>{k.aciklama}</p>
+              <span class="yakinda">Yakında</span>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</Temel>
+
+<style>
+  .bas { display: grid; gap: 18px; justify-items: start; padding-block: clamp(40px, 7vw, 80px) 20px; max-width: 860px; margin-inline: max(16px, calc((100% - var(--genislik)) / 2)); }
+  .bas p { color: var(--metin-2); font-size: 1.15rem; }
+  .bas .durum { font-size: 0.98rem; color: var(--metin-3); }
+  .kirinti { font-size: 0.92rem; color: var(--metin-3); display: flex; gap: 8px; }
+  .kirinti a { color: var(--metin-2); }
+  .alan { padding-block: 26px; }
+  .alan h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
+  .alan h2::before { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--alan-renk); box-shadow: 0 0 18px var(--alan-renk); }
+  .kartlar { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+  .kart { display: grid; gap: 8px; align-content: start; padding: 22px; border-radius: var(--r); background: rgba(18, 15, 58, 0.78); border: 1px solid var(--cizgi); color: #fff; text-decoration: none; }
+  .kart h3 { font-size: 1.4rem; }
+  .kart p { color: var(--metin-2); font-size: 0.97rem; }
+  .kart.hazir { background: #fff; color: var(--kagit-metin); border-color: transparent; box-shadow: var(--parilti); transition: transform 0.15s ease; }
+  .kart.hazir:hover { transform: translateY(-3px); color: var(--kagit-metin); }
+  .kart.hazir p { color: var(--kagit-metin-2); }
+  .kart-alt { font-weight: 900; font-size: 0.9rem; color: var(--mor); margin-top: 4px; }
+  .yakinda { justify-self: start; font-size: 0.78rem; font-weight: 900; letter-spacing: 0.08em; color: var(--metin-3); padding: 4px 10px; border: 1px dashed var(--cizgi); border-radius: 999px; margin-top: 4px; }
+</style>

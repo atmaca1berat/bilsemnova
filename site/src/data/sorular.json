@@ -1,0 +1,152 @@
+{
+ "1-kagit-katlama-easy-test06-q07": {
+  "sinif": 1,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-easy-test06-q07",
+  "altTip": "rule_b1_h_halfcircle",
+  "zorluk": "easy",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 3,
+  "dogru": "B"
+ },
+ "2-kagit-katlama-easy-test01-q11": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-easy-test01-q11",
+  "altTip": "rule_b1_v_triangle",
+  "zorluk": "easy",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "A"
+ },
+ "1-kagit-katlama-easy-test07-q13": {
+  "sinif": 1,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-easy-test07-q13",
+  "altTip": "rule_b2_v_inner_hole",
+  "zorluk": "easy",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 3,
+  "dogru": "A"
+ },
+ "2-kagit-katlama-medium-test01-q13": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-medium-test01-q13",
+  "altTip": "rule_b1_h_two_cuts",
+  "zorluk": "medium",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "B"
+ },
+ "2-kagit-katlama-medium-test05-q11": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-medium-test05-q11",
+  "altTip": "rule_b3_double_fold_hole",
+  "zorluk": "medium",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "C"
+ },
+ "3-kagit-katlama-hard-test07-q10": {
+  "sinif": 3,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-hard-test07-q10",
+  "altTip": "rule_b3_double_fold_corner_combo",
+  "zorluk": "hard",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "A"
+ },
+ "2-kagit-katlama-hard-test02-q11": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-hard-test02-q11",
+  "altTip": "rule_b4_diagonal_triangle",
+  "zorluk": "hard",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "C"
+ },
+ "2-kagit-katlama-hard-test01-q07": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-hard-test01-q07",
+  "altTip": "rule_b4_d1_diagonal_triangle",
+  "zorluk": "hard",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "B"
+ },
+ "2-kagit-katlama-easy-test06-q15": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-easy-test06-q15",
+  "altTip": "rule_b1_v_notch",
+  "zorluk": "easy",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "A"
+ },
+ "2-kagit-katlama-easy-test04-q09": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-easy-test04-q09",
+  "altTip": "rule_b2_h_inner_square",
+  "zorluk": "easy",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "B"
+ },
+ "1-kagit-katlama-medium-test04-q02": {
+  "sinif": 1,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-medium-test04-q02",
+  "altTip": "rule_b1_two_cuts",
+  "zorluk": "medium",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 3,
+  "dogru": "B"
+ },
+ "3-kagit-katlama-medium-test05-q09": {
+  "sinif": 3,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-medium-test05-q09",
+  "altTip": "rule_b3_double_fold_square",
+  "zorluk": "medium",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "A"
+ },
+ "2-kagit-katlama-hard-test01-q13": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-hard-test01-q13",
+  "altTip": "rule_b3_double_fold_two_holes",
+  "zorluk": "hard",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "C"
+ },
+ "3-kagit-katlama-hard-test02-q01": {
+  "sinif": 3,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-hard-test02-q01",
+  "altTip": "rule_b4_diagonal_triangle",
+  "zorluk": "hard",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "B"
+ },
+ "2-kagit-katlama-medium-test01-q05": {
+  "sinif": 2,
+  "kategori": "gorsel-yetenek/kagit-katlama",
+  "id": "kagit-katlama-medium-test01-q05",
+  "altTip": "rule_b1_v_diamond",
+  "zorluk": "medium",
+  "soruMetni": "Açıldığında nasıl görünür?",
+  "sikSayisi": 4,
+  "dogru": "D"
+ }
+}

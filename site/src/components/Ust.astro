@@ -1,0 +1,61 @@
+---
+// Üst menü: logo, bağlantılar, indirme düğmesi. Telefonda menü açılır panelde.
+const yol = Astro.url.pathname;
+const baglantilar = [
+  { href: '/konu-anlatimlari/', ad: 'Konu Anlatımları' },
+  { href: '/#uygulama', ad: 'Uygulama' },
+  { href: '/#bilsem-sureci', ad: 'BİLSEM Süreci' },
+  { href: '/#sss', ad: 'Sık Sorulanlar' },
+];
+---
+<header class="ust">
+  <div class="kap ust-ic">
+    <a href="/" class="logo" aria-label="BilsemNova ana sayfa">
+      <img src="/img/uygulama-simgesi.webp" alt="" width="44" height="44" />
+      <span>Bilsem<em>Nova</em></span>
+    </a>
+    <nav aria-label="Ana menü">
+      <button class="menu-dugme" aria-expanded="false" aria-controls="ana-menu" type="button">
+        <span class="gizli">Menüyü aç</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" /></svg>
+      </button>
+      <ul id="ana-menu">
+        {baglantilar.map((b) => (
+          <li><a href={b.href} aria-current={yol.startsWith(b.href) && b.href !== '/' && !b.href.includes('#') ? 'page' : undefined}>{b.ad}</a></li>
+        ))}
+        <li><a href="/#indir" class="dugme ana kucuk">Ücretsiz İndir</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .ust { position: sticky; top: 0; z-index: 50; background: rgba(11, 11, 46, 0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--cizgi); }
+  .ust-ic { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+  .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-family: var(--font-baslik); font-weight: 800; font-size: 1.6rem; }
+  .logo img { width: 44px; height: 44px; border-radius: 12px; }
+  .logo em { font-style: normal; color: var(--sari); }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 6px; }
+  nav a { color: var(--metin-2); text-decoration: none; font-weight: 800; padding: 10px 14px; border-radius: 12px; }
+  nav a:hover, nav a[aria-current='page'] { color: #fff; background: rgba(255, 255, 255, 0.07); }
+  nav .dugme.kucuk { padding: 12px 18px; font-size: 1rem; margin-left: 6px; color: #241a00; }
+  nav .dugme.kucuk:hover { background: linear-gradient(135deg, var(--sari), #ffa94d); color: #241a00; }
+  .menu-dugme { display: none; background: none; border: 1.5px solid var(--cizgi); color: #fff; border-radius: 12px; padding: 8px; cursor: pointer; }
+  @media (max-width: 880px) {
+    .menu-dugme { display: inline-flex; }
+    nav ul { display: none; position: absolute; left: 16px; right: 16px; top: 76px; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px; background: var(--uzay-2); border: 1px solid var(--cizgi); border-radius: var(--r); box-shadow: var(--golge-kart); }
+    nav ul.acik { display: flex; }
+    nav .dugme.kucuk { margin: 6px 0 0; }
+  }
+</style>
+<script>
+  const dugme = document.querySelector<HTMLButtonElement>('.menu-dugme');
+  const liste = document.getElementById('ana-menu');
+  dugme?.addEventListener('click', () => {
+    const acik = liste?.classList.toggle('acik') ?? false;
+    dugme.setAttribute('aria-expanded', String(acik));
+  });
+  liste?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+    liste.classList.remove('acik');
+    dugme?.setAttribute('aria-expanded', 'false');
+  }));
+</script>

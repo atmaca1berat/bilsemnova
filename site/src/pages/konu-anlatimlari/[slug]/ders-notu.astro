@@ -1,0 +1,110 @@
+---
+// Yazdırılabilir ders notu (A4). araclar/pdf_uret.mjs bu sayfayı PDF'e çevirir; arama motorlarına kapalıdır.
+import Temel from '../../../layouts/Temel.astro';
+import Blok from '../../../components/Blok.astro';
+import { KONULAR } from '../../../data/konular';
+import { DIYAGRAM_SETLERI } from '../../../data/diyagramlar';
+import type { Konu } from '../../../data/konu-tipleri';
+import { soru } from '../../../data/sorular';
+
+export function getStaticPaths() {
+  return KONULAR.map((konu) => ({ params: { slug: konu.slug }, props: { konu } }));
+}
+
+const { konu } = Astro.props as { konu: Konu };
+const diyagramlar = DIYAGRAM_SETLERI[konu.slug] ?? {};
+let ornekNo = 0;
+const bolumler = konu.bolumler.map((b) => ({
+  ...b,
+  bloklar: b.bloklar.map((blok) => ({ blok, sira: blok.t === 'ornek' ? ++ornekNo : 0 })),
+}));
+const alistirmalar = konu.bolumler.flatMap((b) => b.bloklar).flatMap((b) => (b.t === 'alistirma' ? b.sorular : []));
+---
+<Temel baslik={`${konu.ad} — Ders Notu | BilsemNova`} aciklama={konu.ozet} sade dizinleme={false}>
+  <div class="not">
+    <header class="not-bas">
+      <div class="not-logo"><img src="/img/uygulama-simgesi.webp" alt="" /><span>Bilsem<em>Nova</em></span></div>
+      <span>Konu anlatımı · {konu.alan} · {konu.siniflar}</span>
+    </header>
+    <h1>{konu.ad}</h1>
+    <p class="not-giris">{konu.giris}</p>
+
+    {bolumler.map((b) => (
+      <section class="not-bolum">
+        <h2>{b.baslik}</h2>
+        {b.bloklar.map(({ blok, sira }) => <Blok blok={blok} diyagramlar={diyagramlar} sira={sira} yazdir />)}
+      </section>
+    ))}
+
+    {alistirmalar.length > 0 && (
+      <section class="not-bolum anahtar">
+        <h2>Cevap anahtarı</h2>
+        <ol>
+          {alistirmalar.map((a, i) => (
+            <li><b>Alıştırma {i + 1}: {soru(a.soru).dogru}.</b> {a.aciklama}</li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    <footer class="not-alt">
+      Bu ders notu ücretsizdir; paylaşabilir ve çoğaltabilirsiniz. Güncel sürüm ve daha fazla konu: <b>bilsemnova.com/konu-anlatimlari</b>
+    </footer>
+  </div>
+</Temel>
+
+<style>
+  /* Ders notu bir kâğıt sayfası: açık renk şeması. Koyu şemada Chrome, yazdırırken sayfa kenar
+     boşluklarını koyu tuval rengiyle (#121212) boyuyor ve yazı koyu zemine yapışık görünüyordu. */
+  :global(html:root) { color-scheme: light !important; background: #fff; }
+  :global(body.sade) { background: #e9e7f5; }
+  :global(body.sade .yildizlar) { display: none; }
+  .not { width: min(210mm, 100% - 24px); margin: 24px auto; background: #fff; color: var(--kagit-metin); padding: 16mm 15mm; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); display: grid; gap: 18px; }
+  .not-bas { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--kagit-cizgi); color: var(--kagit-metin-2); font-size: 0.85rem; }
+  .not-logo { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-baslik); font-weight: 800; font-size: 1.3rem; color: var(--kagit-metin); }
+  .not-logo img { width: 30px; height: 30px; border-radius: 8px; }
+  .not-logo em { font-style: normal; color: #d99a00; }
+  .not h1 { font-size: 2.6rem; color: var(--kagit-metin); }
+  .not-giris { color: var(--kagit-metin-2); font-size: 1.05rem; line-height: 1.7; }
+  .not-bolum { display: grid; gap: 16px; padding-top: 10px; }
+  .not-bolum > h2 { font-size: 1.7rem; color: var(--kagit-metin); padding-bottom: 6px; border-bottom: 3px solid var(--sari); justify-self: start; }
+  .anahtar ol { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; color: var(--kagit-metin-2); line-height: 1.6; }
+  .anahtar b { color: #0e7a4b; }
+  .not-alt { margin-top: 12px; padding-top: 12px; border-top: 2px solid var(--kagit-cizgi); color: var(--kagit-metin-2); font-size: 0.85rem; }
+
+  @media print {
+    @page { size: A4; margin: 15mm 15mm 16mm; }
+    /* Kök arka plan sayfanın tamamına (kenar boşlukları dahil) yayılır; basılmazsa kenarlar şeffaf kalır ve
+       Acrobat'ın koyu temasında yazı sayfa kenarına yapışık görünür. */
+    :global(html), :global(body.sade) { background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :global(#cerez) { display: none !important; }
+    .not { width: auto; margin: 0; padding: 0; box-shadow: none; }
+    /* Soru ile şıkları ve çözüm kutusu bölünmez; örneğin tamamı bölünebilir ki sayfalarda büyük boşluk kalmasın. */
+    .not :global(.b-kural), .not :global(.b-kutu), .not :global(.b-alistirma > li), .not :global(.b-diyagram), .not :global(figure), .not :global(.cozum-ic) { break-inside: avoid; }
+    .not :global(.ornek-bas) { break-after: avoid; }
+    .not-bolum > h2 { break-after: avoid; }
+    .not :global(*) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    /* Yazdırmada yoğun düzen: örnekler daha küçük, iki örnek bir sayfaya sığsın */
+    .not { gap: 12px; font-size: 10.5pt; }
+    .not h1 { font-size: 26pt; }
+    .not-bolum { gap: 10px; }
+    .not-bolum > h2 { font-size: 17pt; }
+    .not :global(.b-p), .not :global(.b-liste), .not :global(.b-kural p), .not :global(.b-kutu p) { font-size: 10.5pt; line-height: 1.55; }
+    .not :global(.b-kural), .not :global(.b-ornek) { padding: 12px 14px; gap: 10px; }
+    .not :global(.b-kural h3), .not :global(.b-ornek h3) { font-size: 13pt; }
+    .not :global(.b-diyagram) { padding: 6px; }
+    .not :global(.b-diyagram svg) { max-height: 175px; }
+    .not :global(.b-sorugorsel img) { max-height: 150px; }
+    .not :global(.soru-karti) { gap: 8px; }
+    .not :global(.soru-gorsel) { max-height: 150px !important; padding: 6px; }
+    .not :global(.siklar) { width: 70%; justify-self: center; gap: 8px; }
+    .not :global(.sik) { padding: 16px 6px 6px; border-radius: 10px; }
+    .not :global(.cozum-ic) { padding: 10px 14px; gap: 8px; }
+    .not :global(.adimlar) { font-size: 10pt; gap: 4px; line-height: 1.5; }
+    .not :global(.eleme) { font-size: 10pt; padding: 8px 12px; }
+    .not :global(.b-alistirma) { gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .not :global(.b-alistirma > li) { padding: 10px; }
+    .not :global(.b-alistirma .siklar) { width: 100%; }
+    .not :global(.b-alistirma .soru-gorsel) { max-height: 120px !important; }
+  }
+</style>

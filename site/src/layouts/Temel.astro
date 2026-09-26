@@ -1,0 +1,58 @@
+---
+import '../styles/genel.css';
+import Ust from '../components/Ust.astro';
+import Alt from '../components/Alt.astro';
+import Yildizlar from '../components/Yildizlar.astro';
+import Izleme from '../components/Izleme.astro';
+import { SITE } from '../data/site';
+
+interface Props {
+  baslik: string;
+  aciklama: string;
+  gorsel?: string;
+  tur?: 'website' | 'article';
+  yapilandirilmis?: Record<string, unknown>;
+  /** Slayt görünümü gibi tam ekran sayfalarda üst/alt bölümleri gizler. */
+  sade?: boolean;
+  /** Arama motorlarına kapalı sayfa (ör. PDF'e dönüşen ders notu). */
+  dizinleme?: boolean;
+}
+const { baslik, aciklama, gorsel = '/img/og-kapak.jpg', tur = 'website', yapilandirilmis, sade = false, dizinleme = true } = Astro.props;
+const kanonik = new URL(Astro.url.pathname, SITE.adres).href;
+const gorselAdres = new URL(gorsel, SITE.adres).href;
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{baslik}</title>
+    <meta name="description" content={aciklama} />
+    {dizinleme ? <link rel="canonical" href={kanonik} /> : <meta name="robots" content="noindex, follow" />}
+    <meta name="theme-color" content="#0b0b2e" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/Baloo2-800.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/Nunito-800.woff" as="font" type="font/woff" crossorigin />
+    <meta property="og:type" content={tur} />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="BilsemNova" />
+    <meta property="og:title" content={baslik} />
+    <meta property="og:description" content={aciklama} />
+    {dizinleme && <meta property="og:url" content={kanonik} />}
+    <meta property="og:image" content={gorselAdres} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-itunes-app" content="app-id=6792328680" />
+    {yapilandirilmis && <script type="application/ld+json" set:html={JSON.stringify(yapilandirilmis)} />}
+  </head>
+  <body class:list={{ sade }}>
+    <a class="atla" href="#icerik">İçeriğe geç</a>
+    <Yildizlar />
+    {!sade && <Ust />}
+    <main id="icerik">
+      <slot />
+    </main>
+    {!sade && <Alt />}
+    <Izleme />
+  </body>
+</html>

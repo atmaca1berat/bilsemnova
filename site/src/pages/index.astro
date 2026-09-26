@@ -1,0 +1,322 @@
+---
+import Temel from '../layouts/Temel.astro';
+import Magazalar from '../components/Magazalar.astro';
+import { SAYILAR, SITE } from '../data/site';
+import { TUM_KATEGORILER } from '../data/kategoriler';
+
+const vitrin = ['kagit-katlama', 'matris', 'oruntu', 'kup-sayma'].map((s) => TUM_KATEGORILER.find((k) => k.slug === s)!);
+
+const ozellikler = [
+  {
+    gorsel: 'ekran-neden', cip: 'Yanlıştan öğrenir', baslik: 'Yanlış cevapta nedenini anlatır',
+    metin: 'Çocuk yanlış yaptığında doğru cevabın nedenini kısa ve anlaşılır bir açıklamayla görür. Böylece aynı hatayı tekrar etmez.',
+  },
+  {
+    gorsel: 'ekran-deneme', cip: 'Deneme sınavları', baslik: 'BİLSEM tarzı deneme sınavları',
+    metin: '50 soru, 30 dakika, üç zorluk seviyesi. Süreyi yönetmeyi ve farklı soru tiplerini bir arada çözmeyi öğrenir.',
+  },
+  {
+    gorsel: 'ekran-oyunlar', cip: `${SAYILAR.oyun} zekâ oyunu`, baslik: 'Oynarken öğrenir',
+    metin: 'Her oyun bir beceriyi çalıştırır ve çocuğun seviyesine göre zorlaşır. Soru çözmekten sıkıldığında bile öğrenmeye devam eder.',
+  },
+  {
+    gorsel: 'ekran-karne', cip: 'Veli paneli', baslik: 'Hangi konuda zorlandığını görün',
+    metin: 'Detaylı karne her konunun doğruluk oranını en zayıftan en güçlüye sıralar. Nereye odaklanacağınızı bilirsiniz.',
+  },
+  {
+    gorsel: 'kesit-haftalik-grafik', kesit: true, cip: 'Haftalık aktivite', baslik: 'Her gün ne kadar çalıştığını görün',
+    metin: 'Haftalık aktivite, doğruluk oranı ve çalışma serisi veli panelinde tek ekranda.',
+  },
+  {
+    gorsel: 'ekran-yanlis-defteri', cip: 'Yanlış soru defteri', baslik: 'Yanlışlar kaybolmaz',
+    metin: 'Çocuk ne işaretlediğini ve doğrusunu yan yana görür; anladığı soruyu defterden kendisi çıkarır.',
+  },
+];
+
+const sss = [
+  {
+    s: 'BilsemNova ücretsiz mi?',
+    c: 'Uygulama ücretsiz indirilir ve her gün ücretsiz test ve oyun hakkı vardır. Tüm sorulara, deneme sınavlarına ve oyunlara sınırsız erişim için Premium\'a geçebilirsiniz; Premium\'u 7 gün ücretsiz deneyebilirsiniz.',
+  },
+  {
+    s: 'Hangi sınıflar için uygun?',
+    c: '1, 2 ve 3. sınıf. Sorular sınıfa göre ayrıdır: 1. sınıfta 3 şıklı, 2 ve 3. sınıfta 4 şıklı sorular var. Her soru türünde kolay, orta ve zor seviyeler bulunur.',
+  },
+  {
+    s: 'Tablette çalışır mı?',
+    c: 'Evet. BilsemNova iPhone, iPad ve Android telefon ile tabletlerde çalışır. BİLSEM grup taraması tablette yapıldığı için tablette çalışmak formata alışmayı kolaylaştırır.',
+  },
+  { s: 'Uygulamada reklam var mı?', c: 'Hayır. BilsemNova\'da ücretsiz sürümde de Premium\'da da reklam yoktur.' },
+  {
+    s: 'Çocuğumun verileri nerede saklanıyor?',
+    c: 'Çocuğunuzun ilerlemesi yalnızca kendi cihazınızda saklanır; hesap açmanız ya da kişisel bilgi girmeniz gerekmez. Ayrıntılar gizlilik politikamızda.',
+  },
+  {
+    s: 'BilsemNova MEB\'e bağlı mı?',
+    c: 'Hayır. BilsemNova bağımsız bir hazırlık uygulamasıdır. BİLSEM süreciyle ilgili resmî ve güncel bilgiler için Millî Eğitim Bakanlığı duyurularını takip edin.',
+  },
+];
+
+const yapilandirilmis = {
+  '@context': 'https://schema.org',
+  '@type': 'MobileApplication',
+  name: 'BilsemNova: BİLSEM Hazırlık',
+  operatingSystem: 'iOS, Android',
+  applicationCategory: 'EducationalApplication',
+  inLanguage: 'tr',
+  url: SITE.adres,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'TRY' },
+  audience: { '@type': 'EducationalAudience', educationalRole: 'student', audienceType: '1-3. sınıf öğrencileri ve velileri' },
+};
+---
+<Temel
+  baslik="BilsemNova — BİLSEM'e oyun gibi hazırlık | 1-3. sınıf"
+  aciklama="BİLSEM grup taraması tablette yapılıyor. 1-3. sınıf için 17.000'den fazla görsel soru, deneme sınavları, zekâ oyunları ve veliye özel gelişim karnesi."
+  yapilandirilmis={yapilandirilmis}
+>
+  <section class="kahraman kap">
+    <div class="kahraman-metin">
+      <span class="cip">BİLSEM · 1-3. SINIF</span>
+      <h1>BİLSEM sınavı tablette. <span class="parlak">Çocuğunuz formata şimdiden alışsın.</span></h1>
+      <p class="giris">
+        1-3. sınıf için {SAYILAR.soru} görsel soru, deneme sınavları, zekâ oyunları ve veliye özel gelişim karnesi.
+        Yanlış cevapta nedenini anlatır, çocuğunuzun seviyesine göre zorlaşır.
+      </p>
+      <Magazalar kaynak="" />
+      <ul class="guven">
+        <li>Ücretsiz başlayın</li>
+        <li>Reklam yok</li>
+        <li>Telefon ve tablette</li>
+      </ul>
+    </div>
+    <div class="kahraman-gorsel" aria-hidden="true">
+      <div class="telefon"><img src="/img/ekran-matris.webp" alt="" width="660" height="1434" /></div>
+      <img class="kahraman-deha" src="/img/deha-wave.webp" alt="" width="560" height="560" />
+      <div class="yuzen yuzen-1"><b>{SAYILAR.soru}</b> görsel soru</div>
+      <div class="yuzen yuzen-2"><b>{SAYILAR.kategori}</b> soru türü</div>
+    </div>
+  </section>
+
+  <section class="sayilar kap" aria-label="Rakamlarla BilsemNova">
+    <div><b>{SAYILAR.soru}</b><span>görsel soru</span></div>
+    <div><b>{SAYILAR.kategori}</b><span>soru türü, 3 alanda</span></div>
+    <div><b>{SAYILAR.oyun}</b><span>zekâ oyunu</span></div>
+    <div><b>3</b><span>sınıf düzeyi</span></div>
+  </section>
+
+  <section id="uygulama" class="bolum kap">
+    <div class="bolum-bas">
+      <span class="cip sari">UYGULAMA</span>
+      <h2>Soru çözmekten fazlası</h2>
+      <p>Görsel dikkat, hafıza, uzamsal düşünme ve mantık becerilerini BİLSEM tarzı sorular ve oyunlarla geliştirir; veliye de ilerlemeyi açıkça gösterir.</p>
+    </div>
+
+    <article class="vitrin-sorular">
+      <div class="vitrin-metin">
+        <span class="cip">BİLSEM tarzı sorular</span>
+        <h3>Dikkat, hafıza, görsel zekâ ve mantık: {SAYILAR.kategori} soru türü</h3>
+        <p>Matris, örüntü, kâğıt katlama, küp, kuş bakışı, gölge, hafıza ve daha fazlası. Her soru türünde kolay, orta ve zor seviye; 1, 2 ve 3. sınıf için ayrı sorular.</p>
+      </div>
+      <div class="uc-telefon" aria-hidden="true">
+        <div class="telefon"><img src="/img/ekran-golge.webp" alt="" width="660" height="1434" loading="lazy" /></div>
+        <div class="telefon orta"><img src="/img/ekran-matris.webp" alt="" width="660" height="1434" loading="lazy" /></div>
+        <div class="telefon"><img src="/img/ekran-hafiza.webp" alt="" width="660" height="1434" loading="lazy" /></div>
+      </div>
+    </article>
+
+    <div class="ozellik-izgara">
+      {ozellikler.map((o) => (
+        <article class="ozellik">
+          <div class="ozellik-gorsel" aria-hidden="true">
+            {o.kesit
+              ? <img class="kesit" src={`/img/${o.gorsel}.webp`} alt="" loading="lazy" />
+              : <div class="telefon"><img src={`/img/${o.gorsel}.webp`} alt="" width="660" height="1434" loading="lazy" /></div>}
+          </div>
+          <div class="ozellik-metin">
+            <span class="cip">{o.cip}</span>
+            <h3>{o.baslik}</h3>
+            <p>{o.metin}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bolum kap konu-vitrin">
+    <div class="bolum-bas">
+      <span class="cip yesil">ÜCRETSİZ</span>
+      <h2>Konu anlatımları</h2>
+      <p>Her soru türü için kurallar, adım adım çözülmüş örnekler ve alıştırmalar. Web'de okuyun, slayt olarak açın ya da PDF indirin.</p>
+    </div>
+    <div class="konu-kartlar">
+      {vitrin.map((k) => (
+        k.hazir ? (
+          <a class="konu-kart hazir" href={`/konu-anlatimlari/${k.slug}/`}>
+            <span class="konu-alan">{k.alan.ad}</span>
+            <h3>{k.ad}</h3>
+            <p>{k.aciklama}</p>
+            <span class="konu-git">Anlatımı aç →</span>
+          </a>
+        ) : (
+          <div class="konu-kart">
+            <span class="konu-alan">{k.alan.ad}</span>
+            <h3>{k.ad}</h3>
+            <p>{k.aciklama}</p>
+            <span class="konu-yakinda">Yakında</span>
+          </div>
+        )
+      ))}
+    </div>
+    <a class="dugme ikincil" href="/konu-anlatimlari/">Tüm konular</a>
+  </section>
+
+  <section id="bilsem-sureci" class="bolum kap">
+    <div class="bolum-bas">
+      <span class="cip">VELİ REHBERİ</span>
+      <h2>BİLSEM süreci 3 adımda</h2>
+      <p>Tarihler 2025-2026 dönemine göredir. 2026-2027 takvimi Millî Eğitim Bakanlığı kılavuzuyla açıklanınca burada güncellenecek.</p>
+    </div>
+    <ol class="surec">
+      <li>
+        <span class="surec-no">1</span>
+        <h3>Aday gösterme</h3>
+        <p>Sınıf öğretmeni, gözlemlerine dayanarak öğrenciyi aday gösterir.</p>
+        <span class="surec-tarih">21-27 Kasım</span>
+      </li>
+      <li>
+        <span class="surec-no">2</span>
+        <h3>Grup tarama</h3>
+        <p>Aday öğrenciler tablet üzerinden, süreli bir uygulamaya katılır.</p>
+        <span class="surec-tarih">15 Aralık - 20 Şubat</span>
+      </li>
+      <li>
+        <span class="surec-no">3</span>
+        <h3>Bireysel değerlendirme</h3>
+        <p>Grup taramada başarılı olan öğrenciler uzmanlarca birebir değerlendirilir.</p>
+        <span class="surec-tarih">6 Nisan - 19 Haziran</span>
+      </li>
+    </ol>
+  </section>
+
+  <section id="sss" class="bolum kap">
+    <div class="bolum-bas">
+      <span class="cip sari">SIK SORULANLAR</span>
+      <h2>Velilerin merak ettikleri</h2>
+    </div>
+    <div class="sss kagit">
+      {sss.map((x) => (
+        <details>
+          <summary>{x.s}</summary>
+          <p>{x.c}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section id="indir" class="bolum kap">
+    <div class="son-cagri">
+      <div>
+        <h2>Bugün başlayın, <span class="parlak">ilk testi birlikte çözün</span></h2>
+        <p>Her gün ücretsiz test ve oyun hakkı. Beğenirseniz Premium'a geçin.</p>
+        <Magazalar kaynak="alt" />
+      </div>
+      <img src="/img/deha-celebrate.webp" alt="" width="560" height="560" loading="lazy" />
+    </div>
+  </section>
+</Temel>
+
+<style>
+  .kahraman { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding-block: clamp(40px, 7vw, 90px) clamp(30px, 5vw, 60px); }
+  .kahraman-metin { display: grid; gap: 22px; justify-items: start; }
+  .kahraman h1 { font-size: clamp(2.4rem, 5.2vw, 4.1rem); }
+  .kahraman h1 .parlak { display: block; margin-top: 6px; }
+  .giris { color: var(--metin-2); font-size: clamp(1.08rem, 1.6vw, 1.25rem); max-width: 560px; }
+  .guven { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--metin-3); font-size: 0.95rem; }
+  .guven li::before { content: '✓'; color: var(--yesil); font-weight: 900; margin-right: 6px; }
+  .kahraman-gorsel { position: relative; justify-self: center; width: min(330px, 78vw); margin-block: 20px; }
+  .kahraman-deha { position: absolute; width: 190px; right: -110px; bottom: -30px; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45)); }
+  .yuzen { position: absolute; padding: 10px 16px; border-radius: 14px; background: #fff; color: var(--kagit-metin); font-weight: 800; font-size: 0.95rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); white-space: nowrap; }
+  .yuzen b { font-family: var(--font-baslik); font-size: 1.2rem; color: var(--mor); }
+  .yuzen-1 { left: -150px; top: 30%; }
+  .yuzen-2 { left: -120px; top: 64%; }
+
+  .sayilar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--cizgi); border: 1px solid var(--cizgi); border-radius: var(--r); overflow: hidden; }
+  .sayilar div { background: rgba(18, 15, 58, 0.92); padding: 22px 24px; display: grid; gap: 2px; }
+  .sayilar b { font-family: var(--font-baslik); font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1; color: var(--sari); font-variant-numeric: tabular-nums; }
+  .sayilar span { color: var(--metin-2); }
+
+  .vitrin-sorular { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 32px; align-items: center; padding: clamp(24px, 4vw, 44px); border-radius: var(--r-buyuk); background: linear-gradient(135deg, rgba(107, 91, 255, 0.22), rgba(255, 107, 176, 0.1)); border: 1px solid var(--cizgi); margin-bottom: 28px; }
+  .vitrin-metin { display: grid; gap: 14px; justify-items: start; }
+  .vitrin-metin p { color: var(--metin-2); }
+  .uc-telefon { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: center; }
+  .uc-telefon .telefon { padding: 7px; border-radius: 30px; }
+  .uc-telefon .telefon img { border-radius: 24px; }
+  .uc-telefon .telefon:not(.orta) { transform: scale(0.9); opacity: 0.85; }
+
+  .ozellik-izgara { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .ozellik { display: grid; grid-template-columns: 130px 1fr; gap: 22px; align-items: center; padding: 24px; border-radius: var(--r); background: rgba(18, 15, 58, 0.78); border: 1px solid var(--cizgi); }
+  .ozellik:last-child:nth-child(odd) { grid-column: 1 / -1; grid-template-columns: 130px 1fr; }
+  .ozellik-gorsel .telefon { padding: 6px; border-radius: 24px; }
+  .ozellik-gorsel .telefon img { border-radius: 19px; }
+  .ozellik-gorsel .kesit { width: 100%; border-radius: 14px; box-shadow: 0 0 0 1.5px var(--cizgi), 0 14px 30px rgba(0, 0, 0, 0.35); }
+  .ozellik-metin { display: grid; gap: 10px; justify-items: start; }
+  .ozellik-metin h3 { font-size: 1.45rem; }
+  .ozellik-metin p { color: var(--metin-2); }
+
+  .konu-vitrin { display: grid; justify-items: start; }
+  .konu-kartlar { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .konu-kart { display: grid; gap: 8px; align-content: start; padding: 22px; border-radius: var(--r); background: rgba(18, 15, 58, 0.78); border: 1px solid var(--cizgi); color: #fff; text-decoration: none; }
+  .konu-kart p { color: var(--metin-2); font-size: 0.95rem; }
+  .konu-kart.hazir { background: #fff; color: var(--kagit-metin); border-color: transparent; box-shadow: var(--parilti); transition: transform 0.15s ease; }
+  .konu-kart.hazir:hover { transform: translateY(-3px); color: var(--kagit-metin); }
+  .konu-kart.hazir p { color: var(--kagit-metin-2); }
+  .konu-alan { font-size: 0.75rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--metin-3); }
+  .konu-kart.hazir .konu-alan { color: var(--mor); }
+  .konu-kart h3 { font-size: 1.5rem; }
+  .konu-git { font-weight: 900; color: var(--mor); margin-top: 6px; }
+  .konu-yakinda { justify-self: start; margin-top: 6px; font-size: 0.8rem; font-weight: 900; letter-spacing: 0.08em; color: var(--metin-3); padding: 4px 10px; border: 1px dashed var(--cizgi); border-radius: 999px; }
+
+  .surec { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: none; }
+  .surec li { position: relative; display: grid; gap: 10px; align-content: start; padding: 28px 24px; border-radius: var(--r); background: rgba(18, 15, 58, 0.78); border: 1px solid var(--cizgi); }
+  .surec-no { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-family: var(--font-baslik); font-weight: 800; font-size: 1.5rem; color: #1b1846; background: linear-gradient(135deg, var(--sari), var(--pembe)); }
+  .surec p { color: var(--metin-2); }
+  .surec-tarih { justify-self: start; font-weight: 900; color: var(--sari); padding: 6px 12px; border-radius: 999px; background: rgba(255, 203, 71, 0.1); border: 1px solid rgba(255, 203, 71, 0.35); font-variant-numeric: tabular-nums; }
+
+  .sss { display: grid; gap: 4px; padding: clamp(10px, 2vw, 20px) clamp(18px, 3vw, 36px); }
+  .sss details { border-bottom: 1px solid var(--kagit-cizgi); padding-block: 6px; }
+  .sss details:last-child { border-bottom: 0; }
+  .sss summary { cursor: pointer; font-family: var(--font-baslik); font-weight: 800; font-size: 1.25rem; padding-block: 14px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .sss summary::-webkit-details-marker { display: none; }
+  .sss summary::after { content: '+'; color: var(--mor); font-size: 1.6rem; line-height: 1; }
+  .sss details[open] summary::after { content: '−'; }
+  .sss details p { color: var(--kagit-metin-2); padding-bottom: 16px; max-width: 760px; }
+
+  .son-cagri { display: grid; grid-template-columns: 1fr 260px; gap: 24px; align-items: center; padding: clamp(28px, 5vw, 56px); border-radius: var(--r-buyuk); background: radial-gradient(600px 300px at 20% 0%, rgba(255, 203, 71, 0.18), transparent 70%), linear-gradient(135deg, #2b2275, #1b1650); border: 1px solid var(--cizgi); }
+  .son-cagri > div { display: grid; gap: 18px; justify-items: start; }
+  .son-cagri p { color: var(--metin-2); font-size: 1.12rem; }
+  .son-cagri img { filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45)); }
+
+  @media (max-width: 1240px) { .kahraman-deha { right: -40px; } }
+  @media (max-width: 980px) {
+    .kahraman { grid-template-columns: 1fr; }
+    .kahraman-gorsel { width: min(280px, 64vw); }
+    .kahraman-deha { width: 140px; right: -80px; }
+    .yuzen-1 { left: -130px; }
+    .yuzen-2 { left: -104px; }
+    .vitrin-sorular { grid-template-columns: 1fr; }
+    .konu-kartlar { grid-template-columns: repeat(2, 1fr); }
+    .surec { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .sayilar { grid-template-columns: repeat(2, 1fr); }
+    .ozellik-izgara { grid-template-columns: 1fr; }
+    .ozellik, .ozellik:last-child:nth-child(odd) { grid-template-columns: 96px 1fr; gap: 16px; padding: 18px; }
+    .son-cagri { grid-template-columns: 1fr; }
+    .son-cagri img { width: 180px; justify-self: center; }
+  }
+  @media (max-width: 600px) { .yuzen { display: none; } }
+  @media (max-width: 460px) {
+    .konu-kartlar { grid-template-columns: 1fr; }
+    .kahraman-deha { right: -30px; width: 110px; }
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+import { SITE } from '../data/site';
+import { TUM_KATEGORILER } from '../data/kategoriler';
+import Magazalar from './Magazalar.astro';
+const hazir = TUM_KATEGORILER.filter((k) => k.hazir);
+const yil = new Date().getFullYear();
+---
+<footer class="alt">
+  <div class="kap alt-izgara">
+    <div class="alt-marka">
+      <a href="/" class="alt-logo"><img src="/img/uygulama-simgesi.webp" alt="" width="40" height="40" /><span>Bilsem<em>Nova</em></span></a>
+      <p>1-3. sınıf çocuklar için BİLSEM'e hazırlık uygulaması: görsel sorular, deneme sınavları, zekâ oyunları ve veli karnesi.</p>
+      <Magazalar kaynak="footer" boyut={46} />
+    </div>
+    <div>
+      <h2 class="alt-baslik">Konu anlatımları</h2>
+      <ul>
+        <li><a href="/konu-anlatimlari/">Tüm konular</a></li>
+        {hazir.map((k) => <li><a href={`/konu-anlatimlari/${k.slug}/`}>{k.ad}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2 class="alt-baslik">BilsemNova</h2>
+      <ul>
+        <li><a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a></li>
+        <li><a href={SITE.instagram} rel="noopener">Instagram</a></li>
+        <li><a href={SITE.gizlilik}>Gizlilik politikası</a></li>
+        <li><a href={SITE.kosullar}>Kullanım koşulları</a></li>
+        <li><a href="#" data-cerez-ac>Çerez tercihleri</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="kap alt-not">
+    <p>© {yil} BilsemNova. BilsemNova, Millî Eğitim Bakanlığı ya da BİLSEM ile bağlantılı değildir; bağımsız bir hazırlık uygulamasıdır.</p>
+  </div>
+</footer>
+<style>
+  .alt { margin-top: 40px; border-top: 1px solid var(--cizgi); background: rgba(7, 6, 30, 0.6); padding-block: 56px 28px; }
+  .alt-izgara { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; }
+  .alt-marka { display: grid; gap: 16px; align-content: start; }
+  .alt-marka p { color: var(--metin-2); max-width: 420px; }
+  .alt-logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-family: var(--font-baslik); font-weight: 800; font-size: 1.45rem; }
+  .alt-logo img { border-radius: 10px; }
+  .alt-logo em { font-style: normal; color: var(--sari); }
+  .alt-baslik { font-size: 1.05rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--metin-3); margin-bottom: 12px; }
+  .alt ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .alt ul a { color: var(--metin-2); text-decoration: none; }
+  .alt ul a:hover { color: #fff; text-decoration: underline; }
+  .alt-not { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--cizgi); color: var(--metin-3); font-size: 0.88rem; }
+  @media (max-width: 760px) { .alt-izgara { grid-template-columns: 1fr; gap: 28px; } }
+</style>

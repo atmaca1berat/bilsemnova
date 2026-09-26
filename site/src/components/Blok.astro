@@ -1,0 +1,155 @@
+---
+// Konu anlatımı içerik bloğunu makale sayfasında gösterir.
+import type { Blok } from '../data/konu-tipleri';
+import SoruKarti from './SoruKarti.astro';
+import { soru } from '../data/sorular';
+
+// yazdir: ders notu (PDF) için — çözümler açık gösterilir, alıştırma cevapları sayfanın sonundaki anahtara gider.
+interface Props { blok: Blok; diyagramlar: Record<string, string>; sira?: number; yazdir?: boolean; }
+const { blok, diyagramlar, sira = 0, yazdir = false } = Astro.props;
+const kutuBaslik = { ipucu: 'İpucu', dikkat: 'Dikkat', veli: 'Veliye not' } as const;
+---
+{blok.t === 'p' && <p class="b-p" set:html={blok.html} />}
+
+{blok.t === 'h3' && <h3 class="b-h3">{blok.metin}</h3>}
+
+{blok.t === 'liste' && (blok.numarali
+  ? <ol class="b-liste numarali">{blok.maddeler.map((m) => <li set:html={m} />)}</ol>
+  : <ul class="b-liste">{blok.maddeler.map((m) => <li set:html={m} />)}</ul>)}
+
+{blok.t === 'kural' && (
+  <section class="b-kural">
+    <div class="kural-bas">
+      <span class="kural-no">Kural {blok.no}</span>
+      <h3>{blok.baslik}</h3>
+    </div>
+    <p set:html={blok.html} />
+    {blok.diyagram && <div class="b-diyagram" set:html={diyagramlar[blok.diyagram]} />}
+  </section>
+)}
+
+{blok.t === 'kutu' && (
+  <aside class:list={['b-kutu', blok.tur]}>
+    <span class="kutu-tur">{kutuBaslik[blok.tur]}</span>
+    <b>{blok.baslik}</b>
+    <p set:html={blok.html} />
+  </aside>
+)}
+
+{blok.t === 'diyagram' && (
+  <figure class="b-diyagram-kutu">
+    <div class="b-diyagram" set:html={diyagramlar[blok.ad]} />
+    {blok.aciklama && <figcaption>{blok.aciklama}</figcaption>}
+  </figure>
+)}
+
+{blok.t === 'sorugorsel' && (
+  <figure class="b-sorugorsel">
+    <img src={`/soru/${blok.soru}/soru.${yazdir ? 'png' : 'svg'}`} alt={blok.aciklama} loading="lazy" />
+    <figcaption>{blok.aciklama}</figcaption>
+  </figure>
+)}
+
+{blok.t === 'ornek' && (
+  <section class="b-ornek" id={`ornek-${sira}`}>
+    <div class="ornek-bas">
+      <span class="ornek-no">Örnek {sira}</span>
+      <h3>{blok.baslik}</h3>
+    </div>
+    {yazdir ? (
+      <>
+        <SoruKarti anahtar={blok.soru} dogruGoster kucuk duz />
+        <div class="cozum-ic">
+          <ol class="adimlar">{blok.adimlar.map((a) => <li set:html={a} />)}</ol>
+          {blok.eleme && <p class="eleme" set:html={blok.eleme} />}
+        </div>
+      </>
+    ) : (
+      <>
+        <SoruKarti anahtar={blok.soru} />
+        <details class="cozum">
+          <summary>Çözümü göster</summary>
+          <div class="cozum-ic">
+            <SoruKarti anahtar={blok.soru} dogruGoster kucuk />
+            <ol class="adimlar">{blok.adimlar.map((a) => <li set:html={a} />)}</ol>
+            {blok.eleme && <p class="eleme" set:html={blok.eleme} />}
+          </div>
+        </details>
+      </>
+    )}
+  </section>
+)}
+
+{blok.t === 'alistirma' && (
+  <ol class="b-alistirma">
+    {blok.sorular.map((a, i) => (
+      <li>
+        <span class="alistirma-no">Alıştırma {i + 1}</span>
+        <SoruKarti anahtar={a.soru} kucuk duz={yazdir} />
+        {!yazdir && (
+          <details class="cozum">
+            <summary>Cevabı göster</summary>
+            <p class="alistirma-cevap"><b>Doğru cevap: {soru(a.soru).dogru}.</b> {a.aciklama}</p>
+          </details>
+        )}
+      </li>
+    ))}
+  </ol>
+)}
+
+<style>
+  .b-p { color: var(--kagit-metin-2); font-size: 1.08rem; line-height: 1.75; }
+  .b-p :global(b) { color: var(--kagit-metin); }
+  .b-h3 { font-size: 1.4rem; color: var(--kagit-metin); }
+  .b-liste { margin: 0; padding-left: 1.3em; display: grid; gap: 10px; color: var(--kagit-metin-2); font-size: 1.05rem; line-height: 1.65; }
+  .b-liste :global(b) { color: var(--kagit-metin); }
+  .b-liste.numarali { padding-left: 0; list-style: none; counter-reset: adim; }
+  .b-liste.numarali li { counter-increment: adim; position: relative; padding-left: 52px; min-height: 38px; }
+  .b-liste.numarali li::before { content: counter(adim); position: absolute; left: 0; top: -2px; width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; font-family: var(--font-baslik); font-weight: 800; color: #fff; background: var(--mor); }
+
+  .b-kural { display: grid; gap: 14px; padding: clamp(18px, 3vw, 28px); border-radius: var(--r); background: var(--kagit-2); border: 1.5px solid var(--kagit-cizgi); }
+  .kural-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .kural-no { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--mor); padding: 5px 12px; border-radius: 999px; }
+  .b-kural h3 { font-size: 1.4rem; color: var(--kagit-metin); }
+  .b-kural p { color: var(--kagit-metin-2); font-size: 1.05rem; line-height: 1.7; }
+  .b-kural p :global(b) { color: var(--kagit-metin); }
+  .b-diyagram { background: #fff; border: 1.5px solid var(--kagit-cizgi); border-radius: 16px; padding: clamp(8px, 2vw, 16px); }
+  .b-diyagram :global(svg) { display: block; width: 100%; height: auto; max-height: 300px; }
+
+  .b-kutu { display: grid; gap: 6px; padding: 18px 22px; border-radius: 16px; border-left: 6px solid var(--mor); background: #f3f1ff; }
+  .b-kutu.ipucu { border-color: #12a57a; background: #eafaf3; }
+  .b-kutu.dikkat { border-color: #f08a00; background: #fff5e6; }
+  .b-kutu.veli { border-color: var(--pembe); background: #fff0f7; }
+  .kutu-tur { font-size: 0.75rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kagit-metin-2); }
+  .b-kutu b { font-family: var(--font-baslik); font-size: 1.2rem; color: var(--kagit-metin); }
+  .b-kutu p { color: var(--kagit-metin-2); line-height: 1.65; }
+  .b-kutu p :global(b) { font-family: var(--font-govde); font-size: inherit; }
+
+  .b-sorugorsel { margin: 0; display: grid; gap: 8px; }
+  .b-sorugorsel img { width: 100%; max-height: 300px; object-fit: contain; border: 1.5px solid var(--kagit-cizgi); border-radius: 16px; padding: 10px; background: #fff; }
+  .b-sorugorsel figcaption { color: var(--kagit-metin-2); font-size: 0.92rem; text-align: center; }
+
+  .b-ornek { display: grid; gap: 16px; padding: clamp(18px, 3vw, 28px); border-radius: var(--r); border: 1.5px solid var(--kagit-cizgi); }
+  .ornek-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .ornek-no { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: #1b1846; background: var(--sari); padding: 5px 12px; border-radius: 999px; }
+  .b-ornek h3 { font-size: 1.35rem; color: var(--kagit-metin); }
+  .cozum summary {
+    cursor: pointer; display: inline-flex; align-items: center; gap: 8px; list-style: none;
+    font-family: var(--font-baslik); font-weight: 800; font-size: 1.05rem; color: #fff; background: var(--mor);
+    padding: 12px 18px; border-radius: 12px;
+  }
+  .cozum summary::-webkit-details-marker { display: none; }
+  .cozum summary::after { content: '▾'; }
+  .cozum[open] summary::after { content: '▴'; }
+  .cozum-ic { display: grid; gap: 16px; margin-top: 16px; padding: 18px; border-radius: 16px; background: #f3fbf7; border: 1.5px solid #cdeedd; }
+  .adimlar { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; color: var(--kagit-metin-2); line-height: 1.65; }
+  .adimlar :global(b) { color: var(--kagit-metin); }
+  .eleme { color: var(--kagit-metin); background: #fff; border-radius: 12px; padding: 12px 16px; border: 1.5px solid var(--kagit-cizgi); }
+
+  .b-alistirma { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .b-alistirma > li { display: grid; gap: 12px; align-content: start; padding: 18px; border-radius: var(--r); border: 1.5px solid var(--kagit-cizgi); }
+  .alistirma-no { font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mor); }
+  .alistirma-cevap { margin-top: 12px; color: var(--kagit-metin-2); line-height: 1.6; }
+  .alistirma-cevap b { color: #0e7a4b; }
+  @media (max-width: 760px) { .b-alistirma { grid-template-columns: 1fr; } }
+</style>

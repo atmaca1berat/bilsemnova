@@ -1,0 +1,297 @@
+---
+// Slayt görünümü. Ekranda tek tek gösterilir; yazdırılınca (PDF) her slayt ayrı bir 16:9 sayfa olur.
+import Temel from '../../../layouts/Temel.astro';
+import { KONULAR } from '../../../data/konular';
+import { DIYAGRAM_SETLERI } from '../../../data/diyagramlar';
+import type { Konu } from '../../../data/konu-tipleri';
+import { soru, soruGorseli, HARFLER } from '../../../data/sorular';
+import { SAYILAR } from '../../../data/site';
+
+export function getStaticPaths() {
+  return KONULAR.map((konu) => ({ params: { slug: konu.slug }, props: { konu } }));
+}
+
+const { konu } = Astro.props as { konu: Konu };
+const diyagramlar = DIYAGRAM_SETLERI[konu.slug] ?? {};
+const toplam = konu.slaytlar.length;
+const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
+---
+<Temel
+  baslik={`${konu.ad} Konu Anlatımı — Slaytlar | BilsemNova`}
+  aciklama={`${konu.ad} konu anlatımı slaytları: kurallar, çözümlü örnekler ve çalışma önerileri. Derste yansıtmak için tam ekran açın ya da PDF indirin.`}
+  gorsel={`/img/og/${konu.slug}.jpg`}
+  sade
+>
+  <div class="uygulama">
+    <header class="cubuk">
+      <a class="geri" href="../">← {konu.ad} anlatımına dön</a>
+      <span class="sayac" aria-live="polite"><b id="no">1</b> / {toplam}</span>
+      <div class="cubuk-sag">
+        <a class="kucuk-dugme" href={`/pdf/${konu.slug}-slaytlar.pdf`} download>PDF indir</a>
+        <button class="kucuk-dugme" id="tam-ekran" type="button">Tam ekran</button>
+      </div>
+    </header>
+
+    <div class="sahne-kap">
+      <div class="sahne" id="sahne">
+        {konu.slaytlar.map((s, i) => (
+          <section class:list={['slayt', `slayt-${s.t}`]} aria-roledescription="slayt" aria-label={`Slayt ${i + 1} / ${toplam}`} hidden={i !== 0}>
+            {s.t === 'kapak' && (
+              <div class="kapak">
+                <span class="s-cip">KONU ANLATIMI · {konu.alan.toLocaleUpperCase('tr')}</span>
+                <h1>{konu.ad}</h1>
+                <p>BİLSEM hazırlık · {konu.siniflar}</p>
+                <img class="kapak-deha" src="/img/deha-think.webp" alt="" />
+              </div>
+            )}
+
+            {s.t === 'metin' && (
+              <div class:list={['metin', { 'iki-sutun': s.diyagram || s.soru }]}>
+                <div class="metin-sol">
+                  {s.ust && <span class="s-cip">{s.ust.toLocaleUpperCase('tr')}</span>}
+                  <h2>{s.baslik}</h2>
+                  {s.maddeler && (s.numarali
+                    ? <ol class="numarali">{s.maddeler.map((m) => <li set:html={m} />)}</ol>
+                    : <ul>{s.maddeler.map((m) => <li set:html={m} />)}</ul>)}
+                  {s.html && <p set:html={s.html} />}
+                </div>
+                {s.diyagram && <div class="panel diyagram" set:html={diyagramlar[s.diyagram]} />}
+                {s.soru && <div class="panel"><img src={soruGorseli(s.soru, 'soru')} alt="Örnek soru görseli" /></div>}
+              </div>
+            )}
+
+            {s.t === 'soru' && (
+              <div class="soru-slayt">
+                <div class="soru-bas">
+                  {s.ust && <span class="s-cip sari">{s.ust.toLocaleUpperCase('tr')}</span>}
+                  <h2>{s.baslik}</h2>
+                </div>
+                <div class="panel soru-panel">
+                  <img class="soru-kok" src={soruGorseli(s.soru, 'soru')} alt="Soru görseli" />
+                  <ol class="s-siklar" style={`--adet:${siklar(s.soru).length}`}>
+                    {siklar(s.soru).map((h) => <li><b>{h}</b><img src={soruGorseli(s.soru, h.toLowerCase() as 'a')} alt={`${h} şıkkı`} /></li>)}
+                  </ol>
+                </div>
+                <p class="ipucu">Cevap bir sonraki slaytta</p>
+              </div>
+            )}
+
+            {s.t === 'cevap' && (
+              <div class="cevap-slayt">
+                <div class="panel cevap-panel">
+                  <img class="soru-kok" src={soruGorseli(s.soru, 'soru')} alt="Soru görseli" />
+                  <ol class="s-siklar" style={`--adet:${siklar(s.soru).length}`}>
+                    {siklar(s.soru).map((h) => (
+                      <li class:list={{ dogru: h === soru(s.soru).dogru }}><b>{h}</b><img src={soruGorseli(s.soru, h.toLowerCase() as 'a')} alt={`${h} şıkkı`} /></li>
+                    ))}
+                  </ol>
+                </div>
+                <div class="cevap-metin">
+                  {s.ust && <span class="s-cip yesil">{s.ust.toLocaleUpperCase('tr')}</span>}
+                  <h2>{s.baslik}</h2>
+                  <ol class="s-adimlar">{s.adimlar.map((a) => <li set:html={a} />)}</ol>
+                  <p class="dogru-cevap">Doğru cevap: <b>{soru(s.soru).dogru}</b></p>
+                </div>
+              </div>
+            )}
+
+            {s.t === 'kapanis' && (
+              <div class="kapanis">
+                <span class="s-cip sari">DAHA FAZLA SORU</span>
+                <h2>BilsemNova'da {konu.uygulamadakiSoru} {konu.ad.toLocaleLowerCase('tr')} sorusu</h2>
+                <p>{SAYILAR.soru} görsel soru · deneme sınavları · {SAYILAR.oyun} zekâ oyunu · veli karnesi</p>
+                <div class="kapanis-rozetler">
+                  <img src="/img/app-store-rozet.svg" alt="App Store'dan İndirin" />
+                  <img src="/img/google-play-rozet.png" alt="Google Play'den Alın" />
+                </div>
+                <p class="adres">bilsemnova.com/konu-anlatimlari</p>
+                <img class="kapanis-deha" src="/img/deha-celebrate.webp" alt="" />
+              </div>
+            )}
+
+            <footer class="slayt-alt">
+              <span class="s-logo"><img src="/img/uygulama-simgesi.webp" alt="" /><span>Bilsem<em>Nova</em></span></span>
+              <span>{konu.ad} · {i + 1} / {toplam}</span>
+            </footer>
+          </section>
+        ))}
+      </div>
+    </div>
+
+    <nav class="gezinti" aria-label="Slayt gezintisi">
+      <button id="onceki" type="button" aria-label="Önceki slayt">←</button>
+      <div class="ilerleme" aria-hidden="true"><i id="ilerleme"></i></div>
+      <button id="sonraki" type="button" aria-label="Sonraki slayt">→</button>
+    </nav>
+  </div>
+</Temel>
+
+<script>
+  const slaytlar = Array.from(document.querySelectorAll<HTMLElement>('.slayt'));
+  const no = document.getElementById('no')!;
+  const ilerleme = document.getElementById('ilerleme')!;
+  const onceki = document.getElementById('onceki') as HTMLButtonElement;
+  const sonraki = document.getElementById('sonraki') as HTMLButtonElement;
+  let simdiki = 0;
+
+  function goster(n: number) {
+    simdiki = Math.max(0, Math.min(slaytlar.length - 1, n));
+    slaytlar.forEach((s, i) => { s.hidden = i !== simdiki; });
+    no.textContent = String(simdiki + 1);
+    ilerleme.style.width = `${((simdiki + 1) / slaytlar.length) * 100}%`;
+    onceki.disabled = simdiki === 0;
+    sonraki.disabled = simdiki === slaytlar.length - 1;
+    history.replaceState(null, '', `#${simdiki + 1}`);
+  }
+
+  const bas = parseInt(location.hash.slice(1), 10);
+  goster(Number.isFinite(bas) ? bas - 1 : 0);
+
+  onceki.addEventListener('click', () => goster(simdiki - 1));
+  sonraki.addEventListener('click', () => goster(simdiki + 1));
+  document.addEventListener('keydown', (e) => {
+    // Odak bir düğme/bağlantıdayken Boşluk ve Enter o öğeye ait kalsın.
+    if (e.key === ' ' && (e.target as Element).closest?.('button, a, summary, input, textarea, select')) return;
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); goster(simdiki + 1); }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); goster(simdiki - 1); }
+    else if (e.key === 'Home') goster(0);
+    else if (e.key === 'End') goster(slaytlar.length - 1);
+  });
+  // Sahneye tıklama: sol üçte bir geri, gerisi ileri.
+  document.getElementById('sahne')!.addEventListener('click', (e) => {
+    if ((e.target as Element).closest('a, button')) return;
+    const kutu = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    goster(e.clientX - kutu.left < kutu.width / 3 ? simdiki - 1 : simdiki + 1);
+  });
+  // Kaydırma (dokunmatik)
+  let x0: number | null = null;
+  document.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) goster(dx < 0 ? simdiki + 1 : simdiki - 1);
+    x0 = null;
+  });
+  document.getElementById('tam-ekran')!.addEventListener('click', () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen?.();
+  });
+</script>
+
+<style>
+  :global(body.sade) { overflow: hidden; }
+  .uygulama { height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; gap: 10px; padding: 10px 16px 14px; }
+  .cubuk { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; }
+  .geri { color: var(--metin-2); text-decoration: none; font-weight: 800; }
+  .geri:hover { color: #fff; }
+  .sayac { color: var(--metin-3); font-variant-numeric: tabular-nums; }
+  .sayac b { color: #fff; }
+  .cubuk-sag { display: flex; gap: 8px; }
+  .kucuk-dugme { font: inherit; font-weight: 800; font-size: 0.92rem; color: #fff; background: rgba(255, 255, 255, 0.08); border: 1.5px solid var(--cizgi); border-radius: 10px; padding: 8px 14px; text-decoration: none; cursor: pointer; }
+  .kucuk-dugme:hover { background: rgba(255, 255, 255, 0.15); color: #fff; }
+
+  .sahne-kap { display: grid; place-items: center; min-height: 0; }
+  .sahne { position: relative; width: min(100%, calc((100dvh - 140px) * 16 / 9)); aspect-ratio: 16 / 9; container-type: inline-size; cursor: pointer; }
+
+  .slayt {
+    position: absolute; inset: 0; overflow: hidden; border-radius: 1.6cqw; color: #fff;
+    background:
+      radial-gradient(60cqw 40cqw at 15% -10%, rgba(107, 91, 255, 0.45), transparent 60%),
+      radial-gradient(50cqw 36cqw at 110% 110%, rgba(255, 107, 176, 0.28), transparent 60%),
+      #0b0b2e;
+    box-shadow: 0 0 0 1px var(--cizgi), var(--golge-kart);
+    padding: 4.2cqw 5cqw 6.4cqw;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .slayt::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.55;
+    background-image: radial-gradient(0.15cqw 0.15cqw at 12% 18%, #fff 99%, transparent), radial-gradient(0.12cqw 0.12cqw at 78% 12%, #fff 99%, transparent), radial-gradient(0.18cqw 0.18cqw at 64% 82%, #fff 99%, transparent), radial-gradient(0.12cqw 0.12cqw at 30% 70%, #fff 99%, transparent), radial-gradient(0.15cqw 0.15cqw at 90% 55%, #fff 99%, transparent), radial-gradient(0.12cqw 0.12cqw at 46% 30%, #fff 99%, transparent); }
+  .slayt[hidden] { display: none; }
+  .slayt > div { position: relative; height: 100%; }
+
+  .s-cip { display: inline-block; font-weight: 900; font-size: 1.25cqw; letter-spacing: 0.16em; color: var(--camgobegi); padding: 0.55cqw 1.1cqw; border-radius: 99cqw; border: 0.12cqw solid rgba(126, 230, 240, 0.5); background: rgba(126, 230, 240, 0.08); }
+  .s-cip.sari { color: #ffd66b; border-color: rgba(255, 203, 71, 0.55); background: rgba(255, 203, 71, 0.09); }
+  .s-cip.yesil { color: #6ff0b0; border-color: rgba(61, 220, 151, 0.6); background: rgba(61, 220, 151, 0.1); }
+  .slayt h1 { font-size: 8.5cqw; line-height: 1; margin-top: 1.6cqw; }
+  .slayt h2 { font-size: 3.7cqw; line-height: 1.08; margin-top: 1.2cqw; }
+  .panel { background: #fff; border-radius: 1.6cqw; padding: 1.4cqw; box-shadow: 0 1.6cqw 4cqw rgba(0, 0, 0, 0.35); display: grid; place-items: center; min-height: 0; }
+  .panel img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .panel.diyagram :global(svg) { width: 100%; height: auto; max-height: 30cqw; }
+
+  .kapak { display: grid; align-content: center; justify-items: start; gap: 0.6cqw; padding-left: 1cqw; }
+  .kapak p { font-size: 2.6cqw; font-weight: 800; color: var(--metin-2); margin-top: 1cqw; }
+  .kapak-deha { position: absolute; right: -1cqw; bottom: -3cqw; width: 30cqw; filter: drop-shadow(0 2cqw 4cqw rgba(0, 0, 0, 0.45)); }
+
+  .metin { display: grid; align-content: center; gap: 3cqw; }
+  .metin.iki-sutun { grid-template-columns: 1fr 1.15fr; align-items: center; }
+  .metin-sol { display: grid; gap: 1.4cqw; justify-items: start; }
+  .metin ul, .metin ol { margin: 0.6cqw 0 0; padding: 0; list-style: none; display: grid; gap: 1.1cqw; }
+  .metin ol { counter-reset: m; }
+  .metin ol li { counter-increment: m; padding-left: 4.2cqw; }
+  .metin ol li::before { content: counter(m); left: 0; top: 0.1cqw; width: 3cqw; height: 3cqw; border-radius: 0.8cqw; display: grid; place-items: center; font-family: var(--font-baslik); font-size: 1.7cqw; color: #1b1846; }
+  .metin li { font-size: 2.15cqw; font-weight: 800; line-height: 1.35; color: var(--metin-2); padding-left: 3cqw; position: relative; }
+  .metin li::before { content: ''; position: absolute; left: 0.4cqw; top: 0.75cqw; width: 1.1cqw; height: 1.1cqw; border-radius: 0.3cqw; background: linear-gradient(135deg, var(--sari), var(--pembe)); }
+  .metin p { font-size: 2.1cqw; color: var(--metin-2); }
+  .metin:not(.iki-sutun) ul { gap: 1.5cqw; }
+  .metin:not(.iki-sutun) li { font-size: 2.5cqw; }
+
+  .soru-slayt { display: grid; grid-template-rows: auto 1fr auto; gap: 1.6cqw; }
+  .soru-bas { display: flex; align-items: baseline; gap: 2cqw; }
+  .soru-bas h2 { margin: 0; }
+  .soru-panel, .cevap-panel { grid-template-rows: minmax(0, 1fr) auto; gap: 1.4cqw; align-content: stretch; }
+  .soru-kok { max-height: 20cqw !important; }
+  .s-siklar { list-style: none; margin: 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(var(--adet), minmax(0, 1fr)); gap: 1.2cqw; }
+  .s-siklar li { position: relative; border: 0.18cqw solid #e6e2f7; border-radius: 1.1cqw; padding: 2cqw 0.8cqw 0.8cqw; display: grid; place-items: center; height: 12.5cqw; }
+  .s-siklar li img { max-height: 9.5cqw; }
+  .s-siklar b { position: absolute; left: 0.8cqw; top: 0.4cqw; font-family: var(--font-baslik); font-size: 1.6cqw; color: var(--mor); }
+  .s-siklar li.dogru { border-color: var(--yesil); box-shadow: 0 0 0 0.35cqw rgba(61, 220, 151, 0.35); background: #effcf6; }
+  .s-siklar li.dogru b { color: #0e7a4b; }
+  .ipucu { font-size: 1.6cqw; color: var(--metin-3); text-align: right; }
+
+  .cevap-slayt { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3cqw; align-items: center; }
+  .cevap-panel .soru-kok { max-height: 17cqw !important; }
+  .cevap-panel .s-siklar li { height: 10.5cqw; }
+  .cevap-panel .s-siklar li img { max-height: 7.8cqw; }
+  .cevap-metin { display: grid; gap: 1.4cqw; justify-items: start; }
+  .s-adimlar { margin: 0; padding: 0; list-style: none; counter-reset: a; display: grid; gap: 1.2cqw; }
+  .s-adimlar li { counter-increment: a; position: relative; padding-left: 4cqw; font-size: 1.9cqw; font-weight: 800; line-height: 1.35; color: var(--metin-2); }
+  .s-adimlar li::before { content: counter(a); position: absolute; left: 0; top: 0.1cqw; width: 2.8cqw; height: 2.8cqw; border-radius: 0.8cqw; display: grid; place-items: center; font-family: var(--font-baslik); font-size: 1.6cqw; color: #1b1846; background: var(--yesil); }
+  .dogru-cevap { font-size: 2.1cqw; font-weight: 900; color: #6ff0b0; }
+  .dogru-cevap b { font-family: var(--font-baslik); font-size: 3cqw; }
+
+  .kapanis { display: grid; align-content: center; justify-items: start; gap: 1.6cqw; padding-right: 30cqw; }
+  .kapanis p { font-size: 2.1cqw; color: var(--metin-2); }
+  .kapanis-rozetler { display: flex; gap: 1.4cqw; align-items: center; }
+  .kapanis-rozetler img { height: 5cqw; width: auto; }
+  .kapanis .adres { font-weight: 900; color: var(--sari); }
+  .kapanis-deha { position: absolute; right: -1cqw; bottom: -3cqw; width: 30cqw; filter: drop-shadow(0 2cqw 4cqw rgba(0, 0, 0, 0.45)); }
+
+  .slayt-alt { position: absolute; left: 5cqw; right: 5cqw; bottom: 2.2cqw; display: flex; justify-content: space-between; align-items: center; font-size: 1.3cqw; font-weight: 800; color: var(--metin-3); }
+  .s-logo { display: inline-flex; align-items: center; gap: 0.8cqw; font-family: var(--font-baslik); font-size: 1.7cqw; color: #fff; }
+  .s-logo img { width: 2.6cqw; height: 2.6cqw; border-radius: 0.7cqw; }
+  .s-logo em { font-style: normal; color: var(--sari); }
+
+  .gezinti { display: flex; align-items: center; gap: 12px; width: min(100%, 900px); margin-inline: auto; }
+  .gezinti button { font: inherit; font-size: 1.3rem; font-weight: 900; width: 48px; height: 44px; border-radius: 12px; border: 1.5px solid var(--cizgi); background: rgba(255, 255, 255, 0.08); color: #fff; cursor: pointer; }
+  .gezinti button:disabled { opacity: 0.35; cursor: default; }
+  .ilerleme { flex: 1; height: 6px; border-radius: 99px; background: rgba(255, 255, 255, 0.12); overflow: hidden; }
+  .ilerleme i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--sari), var(--pembe)); transition: width 0.2s ease; }
+
+  /* Çerez bandı sunumda düğmeleri kapatmasın */
+  :global(body.sade #cerez) { left: auto; right: 16px; bottom: 70px; max-width: 460px; padding: 14px 16px; }
+  :global(body.sade #cerez p) { font-size: 0.85rem; flex-basis: 100%; }
+  @media (max-width: 640px) {
+    .geri { font-size: 0.9rem; }
+    .cubuk-sag .kucuk-dugme:last-child { display: none; }
+  }
+
+  /* PDF: her slayt ayrı bir 16:9 sayfa */
+  @media print {
+    @page { size: 1600px 900px; margin: 0; }
+    :global(body.sade) { overflow: visible; background: #0b0b2e; }
+    :global(.yildizlar), .cubuk, .gezinti, :global(#cerez) { display: none !important; }
+    .uygulama { height: auto; display: block; padding: 0; }
+    .sahne-kap { display: block; }
+    .sahne { width: 1600px; aspect-ratio: auto; cursor: default; }
+    .slayt, .slayt[hidden] { position: relative; display: block; width: 1600px; height: 900px; border-radius: 0; box-shadow: none; break-after: page; }
+  }
+</style>

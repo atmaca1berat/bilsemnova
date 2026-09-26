@@ -1,0 +1,6 @@
+<svg width="183" height="183" viewBox="9.0 9.0 182.8 182.8" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow_head" markerWidth="12" markerHeight="12" refX="10" refY="4"
+        orient="auto" markerUnits="strokeWidth">
+  <path d="M0,0 L0,8 L11,4 z" fill="#212121"/>
+</marker>
+</defs><rect x="9.0" y="9.0" width="182.8" height="182.8" fill="#F5F8E8" rx="20" /><defs><mask id="paper_mask_1789"><rect x="14.0" y="14.0" width="172.8" height="172.8" fill="white"/><polygon points="14.0,186.8 42.8,186.8 14.0,158.0" fill="black"/><polygon points="158.0,14.0 186.8,42.8 186.8,14.0" fill="black"/></mask></defs><rect x="14.0" y="14.0" width="172.8" height="172.8" fill="#EAF3FC" stroke="#37474F" stroke-width="2.2" mask="url(#paper_mask_1789)" /><polygon points="14.0,186.8 42.8,186.8 14.0,158.0" fill="none" stroke="#37474F" stroke-width="2.0" stroke-linejoin="round" /><polygon points="158.0,14.0 186.8,42.8 186.8,14.0" fill="none" stroke="#37474F" stroke-width="2.0" stroke-linejoin="round" /></svg>

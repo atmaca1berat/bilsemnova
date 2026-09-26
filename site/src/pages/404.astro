@@ -1,0 +1,20 @@
+---
+import Temel from '../layouts/Temel.astro';
+---
+<Temel baslik="Sayfa bulunamadı | BilsemNova" aciklama="Aradığınız sayfa bulunamadı." dizinleme={false}>
+  <section class="kap yok">
+    <img src="/img/deha-think.webp" alt="" width="560" height="560" />
+    <h1>Bu sayfa kayıp</h1>
+    <p>Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.</p>
+    <div class="dugmeler">
+      <a class="dugme ana" href="/">Ana sayfa</a>
+      <a class="dugme ikincil" href="/konu-anlatimlari/">Konu anlatımları</a>
+    </div>
+  </section>
+</Temel>
+<style>
+  .yok { display: grid; justify-items: center; text-align: center; gap: 16px; padding-block: 60px 40px; }
+  .yok img { width: 200px; }
+  .yok p { color: var(--metin-2); }
+  .dugmeler { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+</style>

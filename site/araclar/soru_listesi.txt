@@ -1,0 +1,21 @@
+# Konu anlatımlarında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Sosyal medya takviminde ileride paylaşılacak sorular BURAYA EKLENMEZ (cevap önceden açığa çıkmasın).
+
+# Kâğıt katlama — çözümlü örnekler
+1 gorsel-yetenek/kagit-katlama kagit-katlama-easy-test06-q07
+2 gorsel-yetenek/kagit-katlama kagit-katlama-easy-test01-q11
+1 gorsel-yetenek/kagit-katlama kagit-katlama-easy-test07-q13
+2 gorsel-yetenek/kagit-katlama kagit-katlama-medium-test01-q13
+2 gorsel-yetenek/kagit-katlama kagit-katlama-medium-test05-q11
+3 gorsel-yetenek/kagit-katlama kagit-katlama-hard-test07-q10
+2 gorsel-yetenek/kagit-katlama kagit-katlama-hard-test02-q11
+2 gorsel-yetenek/kagit-katlama kagit-katlama-hard-test01-q07
+# Kâğıt katlama — alıştırma
+2 gorsel-yetenek/kagit-katlama kagit-katlama-easy-test06-q15
+2 gorsel-yetenek/kagit-katlama kagit-katlama-easy-test04-q09
+1 gorsel-yetenek/kagit-katlama kagit-katlama-medium-test04-q02
+3 gorsel-yetenek/kagit-katlama kagit-katlama-medium-test05-q09
+2 gorsel-yetenek/kagit-katlama kagit-katlama-hard-test01-q13
+3 gorsel-yetenek/kagit-katlama kagit-katlama-hard-test02-q01
+2 gorsel-yetenek/kagit-katlama kagit-katlama-medium-test01-q05

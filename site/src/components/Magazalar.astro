@@ -1,0 +1,21 @@
+---
+// Resmî mağaza rozetleri. data-kaynak: Meta'ya giden "Lead" olayında hangi düğmeye basıldığı.
+import { SITE } from '../data/site';
+// kaynak boşsa eski sitedeki adlar: indir_app_store / indir_play_store (sayfanın üst düğmeleri).
+const { kaynak = '', boyut = 54 } = Astro.props as { kaynak?: string; boyut?: number };
+const ek = kaynak ? `_${kaynak}` : '';
+---
+<div class="rozetler" style={`--rozet:${boyut}px`}>
+  <a href={SITE.appStore} data-kaynak={`app_store${ek}`} class="rozet" rel="noopener">
+    <img src="/img/app-store-rozet.svg" alt="App Store'dan İndirin" width="151" height="40" />
+  </a>
+  <a href={SITE.googlePlay} data-kaynak={`play_store${ek}`} class="rozet" rel="noopener">
+    <img src="/img/google-play-rozet.png" alt="Google Play'den Alın" width="646" height="192" />
+  </a>
+</div>
+<style>
+  .rozetler { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .rozet { display: inline-flex; border-radius: 10px; transition: transform 0.15s ease; }
+  .rozet:hover { transform: translateY(-2px); }
+  .rozet img { height: var(--rozet); width: auto; }
+</style>
