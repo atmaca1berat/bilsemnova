@@ -30,8 +30,11 @@ const gorselAdres = new URL(gorsel, SITE.adres).href;
     <meta name="description" content={aciklama} />
     {dizinleme ? <link rel="canonical" href={kanonik} /> : <meta name="robots" content="noindex, follow" />}
     <meta name="theme-color" content="#0b0b2e" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/simge-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preload" href="/fonts/Baloo2-800.woff" as="font" type="font/woff" crossorigin />
     <link rel="preload" href="/fonts/Nunito-800.woff" as="font" type="font/woff" crossorigin />
     <meta property="og:type" content={tur} />
