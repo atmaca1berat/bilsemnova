@@ -16,6 +16,7 @@ const diyagramlar = DIYAGRAM_SETLERI[konu.slug] ?? {};
 const tumBloklar = konu.bolumler.flatMap((b) => b.bloklar);
 const ornekSayisi = tumBloklar.filter((b) => b.t === 'ornek').length;
 const alistirmaSayisi = tumBloklar.reduce((n, b) => n + (b.t === 'alistirma' ? b.sorular.length : 0), 0);
+const soruEtiketi = konu.soruEtiketi ?? `${konu.ad.toLocaleLowerCase('tr')} sorusu`;
 const tarih = new Date(konu.guncelleme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
 
 // Örnekler bütün bölümler boyunca sırayla numaralanır.
@@ -98,7 +99,7 @@ const yapilandirilmis = {
       <section class="konu-cagri">
         <div>
           <span class="cip sari">BİLSEMNOVA</span>
-          <h2>Uygulamada {konu.uygulamadakiSoru} {konu.ad.toLocaleLowerCase('tr')} sorusu var</h2>
+          <h2>Uygulamada {konu.uygulamadakiSoru.toLocaleString('tr-TR')} {soruEtiketi} var</h2>
           <p>1, 2 ve 3. sınıf için kolaydan zora sıralı sorular. Yanlış cevapta nedenini anlatır; veli karnesinde bu konudaki başarıyı görürsünüz.</p>
           <Magazalar kaynak={`konu_${konu.slug.replace(/-/g, '_')}`} />
         </div>

@@ -9,6 +9,8 @@ export interface SoruBilgisi {
   soruMetni: string;
   sikSayisi: number;
   dogru: string;
+  /** Hafıza sorusu: görsel uygulamada bu kadar saniye gösterilip kapanır. */
+  hafiza: number | null;
 }
 
 const SORULAR = veri as Record<string, SoruBilgisi>;
@@ -20,6 +22,6 @@ export function soru(anahtar: string): SoruBilgisi {
   return s;
 }
 
-// duz: saydamsız PNG kopyası (PDF'e dönüşen sayfalarda; SVG maskeleri PDF'i ağırlaştırıyor).
+// duz: düz JPEG kopyası (PDF'e dönüşen sayfalarda; SVG maskeleri PDF'i ağırlaştırıyor).
 export const soruGorseli = (anahtar: string, parca: 'soru' | 'a' | 'b' | 'c' | 'd', duz = false) =>
-  `/soru/${anahtar}/${parca}.${duz ? 'png' : 'svg'}`;
+  `/soru/${anahtar}/${parca}.${duz ? 'jpg' : 'svg'}`;

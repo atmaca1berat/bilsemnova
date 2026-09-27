@@ -2,7 +2,7 @@
 
 Siteyi derler, geçici bir önizleme sunucusu açar, her konunun /slayt/ ve /ders-notu/ sayfasını
 headless Chrome ile PDF'e yazdırır, PDF'leri public/pdf/'e koyar ve siteyi yeniden derler.
-Konu içeriği değiştiğinde çalıştırın: python3 araclar/pdf_uret.py
+Konu içeriği değiştiğinde çalıştırın: python3 araclar/pdf_uret.py [slug ...]  (slug verilmezse hepsi)
 """
 import os
 import shutil
@@ -52,6 +52,8 @@ def main():
     derle()
     konular = sorted(d for d in os.listdir(os.path.join(SITE, 'dist', 'konu-anlatimlari'))
                      if os.path.isdir(os.path.join(SITE, 'dist', 'konu-anlatimlari', d, 'slayt')))
+    if sys.argv[1:]:
+        konular = [k for k in konular if k in sys.argv[1:]]
     # Astro 7 proje başına tek önizleme sunucusu çalıştırır: açık olanı kapatıp kendimizinkini açarız.
     subprocess.run(['npx', 'astro', 'preview', 'stop'], cwd=SITE, capture_output=True)
     sunucu = subprocess.Popen(['npx', 'astro', 'preview', '--port', str(PORT)], cwd=SITE,

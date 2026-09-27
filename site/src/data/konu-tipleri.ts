@@ -35,6 +35,8 @@ export interface Konu {
   /** Sayfa başındaki giriş paragrafı. */
   giris: string;
   okumaDakika: number;
+  /** "Uygulamada N ___ var" cümlesi için; yoksa "<ad> sorusu". Ör. dikkat soruları → 'dikkat sorusu'. */
+  soruEtiketi?: string;
   uygulamadakiSoru: number;
   guncelleme: string;
   bolumler: Bolum[];

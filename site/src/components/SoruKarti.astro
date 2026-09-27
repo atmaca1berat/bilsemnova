@@ -13,6 +13,7 @@ const zorluk = ({ easy: 'Kolay', medium: 'Orta', hard: 'Zor' } as Record<string,
     <b>{s.soruMetni}</b>
   </figcaption>
   <img class="soru-gorsel" src={soruGorseli(anahtar, 'soru', duz)} alt={`Soru görseli: ${s.soruMetni}`} loading="lazy" />
+  {s.hafiza && <p class="hafiza-not">Uygulamada bu görsel {s.hafiza} saniye gösterilir, sonra kapanır ve soru gelir. Evde görseli {s.hafiza} saniye gösterip kapatarak deneyin.</p>}
   <ol class="siklar" style={`--adet:${siklar.length}`}>
     {siklar.map((h) => (
       <li class:list={['sik', { dogru: dogruGoster && h === s.dogru }]}>
@@ -36,5 +37,11 @@ const zorluk = ({ easy: 'Kolay', medium: 'Orta', hard: 'Zor' } as Record<string,
   .sik.dogru .harf { color: #0e7a4b; }
   .sik.dogru::after { content: '✓'; position: absolute; right: 8px; top: 4px; font-weight: 900; color: #0e7a4b; }
   .kucuk .soru-gorsel { max-height: 240px; }
+  /* Telefonda 4 şık yan yana çok küçülüyor (siluet, simge): 2x2 ızgara. */
+  @media (max-width: 520px) {
+    .siklar[style*='--adet:4'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sik { padding: 20px 6px 6px; }
+  }
+  .hafiza-not { margin: -4px 0 0; font-size: 0.9rem; font-weight: 800; color: #8a4b00; background: #fff5e6; border-radius: 10px; padding: 8px 12px; }
   .kucuk .soru-ust b { font-size: 1.05rem; }
 </style>

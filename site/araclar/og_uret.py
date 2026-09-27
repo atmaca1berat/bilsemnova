@@ -1,6 +1,6 @@
 """Paylaşım önizleme görselleri (1200x630): WhatsApp, Instagram, Facebook bağlantı kartlarında görünür.
 
-Çıktı: public/img/og-kapak.jpg (ana sayfa) ve public/img/og/<konu>.jpg (konu anlatımları).
+Çıktı: public/img/og-kapak.jpg (ana sayfa) ve src/data/konular/*.ts'deki her konu için public/img/og/<slug>.jpg.
 Kullanım: python3 araclar/og_uret.py
 """
 import os
@@ -57,7 +57,27 @@ uret('og-kapak', f'''<div class="ic">{logo}<span class="cip">BİLSEM · 1-3. SIN
 <p>17.000+ görsel soru · deneme sınavları · zekâ oyunları · veli karnesi</p></div>
 <img class="deha" src="file://{PUB}/img/deha-wave.webp"><div class="adres">bilsemnova.com</div>''')
 
-uret('og/kagit-katlama', f'''<div class="ic">{logo}<span class="cip">ÜCRETSİZ KONU ANLATIMI</span>
-<h1>Kâğıt Katlama <span>nasıl çözülür?</span></h1>
-<p>5 temel kural · 7 çözümlü örnek · 8 alıştırma · slayt ve PDF</p></div>
-<img class="deha" src="file://{PUB}/img/deha-think.webp"><div class="adres">bilsemnova.com/konu-anlatimlari</div>''')
+
+def konu_bilgisi(yol):
+    """Konu dosyasından adı ve blok sayılarını okur (dosyalar aynı kalıpta yazılır)."""
+    import re
+    metin = open(yol, encoding='utf-8').read()
+    ad = re.search(r"^\s*ad:\s*'([^']+)'", metin, re.M).group(1)
+    kural = len(re.findall(r"t:\s*'kural'", metin))
+    ornek = len(re.findall(r"t:\s*'ornek'", metin))
+    alistirma = 0
+    for blok in re.finditer(r"t:\s*'alistirma'.*?\]\s*,?\s*\}", metin, re.S):
+        alistirma += len(re.findall(r"soru:\s*'", blok.group(0)))
+    return ad, kural, ornek, alistirma
+
+
+MASKOTLAR = ['think', 'thumbsup', 'wave', 'celebrate']
+KONULAR = os.path.join(SITE, 'src', 'data', 'konular')
+for i, dosya in enumerate(sorted(f for f in os.listdir(KONULAR) if f.endswith('.ts') and f != 'index.ts')):
+    slug = dosya[:-3]
+    ad, kural, ornek, alistirma = konu_bilgisi(os.path.join(KONULAR, dosya))
+    baslik = f'{ad} <span>nasıl çözülür?</span>' if ad.endswith('Soruları') else f'{ad} soruları <span>nasıl çözülür?</span>'
+    uret(f'og/{slug}', f'''<div class="ic">{logo}<span class="cip">ÜCRETSİZ KONU ANLATIMI</span>
+<h1>{baslik}</h1>
+<p>{kural} kural · {ornek} çözümlü örnek · {alistirma} alıştırma · slayt ve PDF</p></div>
+<img class="deha" src="file://{PUB}/img/deha-{MASKOTLAR[i % len(MASKOTLAR)]}.webp"><div class="adres">bilsemnova.com/konu-anlatimlari</div>''')

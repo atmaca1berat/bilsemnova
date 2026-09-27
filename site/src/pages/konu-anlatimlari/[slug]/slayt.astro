@@ -14,6 +14,7 @@ export function getStaticPaths() {
 const { konu } = Astro.props as { konu: Konu };
 const diyagramlar = DIYAGRAM_SETLERI[konu.slug] ?? {};
 const toplam = konu.slaytlar.length;
+const soruEtiketi = konu.soruEtiketi ?? `${konu.ad.toLocaleLowerCase('tr')} sorusu`;
 const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
 ---
 <Temel
@@ -72,7 +73,7 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
                     {siklar(s.soru).map((h) => <li><b>{h}</b><img src={soruGorseli(s.soru, h.toLowerCase() as 'a')} alt={`${h} şıkkı`} /></li>)}
                   </ol>
                 </div>
-                <p class="ipucu">Cevap bir sonraki slaytta</p>
+                <p class="ipucu">{soru(s.soru).hafiza ? `Görseli ${soru(s.soru).hafiza} saniye inceleyin, sonra kapatıp cevaplayın · ` : ''}Cevap bir sonraki slaytta</p>
               </div>
             )}
 
@@ -98,7 +99,7 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
             {s.t === 'kapanis' && (
               <div class="kapanis">
                 <span class="s-cip sari">DAHA FAZLA SORU</span>
-                <h2>BilsemNova'da {konu.uygulamadakiSoru} {konu.ad.toLocaleLowerCase('tr')} sorusu</h2>
+                <h2>BilsemNova'da {konu.uygulamadakiSoru.toLocaleString('tr-TR')} {soruEtiketi}</h2>
                 <p>{SAYILAR.soru} görsel soru · deneme sınavları · {SAYILAR.oyun} zekâ oyunu · veli karnesi</p>
                 <div class="kapanis-rozetler">
                   <img src="/img/app-store-rozet.svg" alt="App Store'dan İndirin" />
