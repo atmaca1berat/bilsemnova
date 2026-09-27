@@ -8,7 +8,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "2-kagit-katlama-easy-test01-q11": {
   "sinif": 2,
@@ -19,7 +20,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "1-kagit-katlama-easy-test07-q13": {
   "sinif": 1,
@@ -30,7 +32,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "2-kagit-katlama-medium-test01-q13": {
   "sinif": 2,
@@ -41,7 +44,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.32
  },
  "2-kagit-katlama-medium-test05-q11": {
   "sinif": 2,
@@ -52,7 +56,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "3-kagit-katlama-hard-test07-q10": {
   "sinif": 3,
@@ -63,7 +68,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.19
  },
  "2-kagit-katlama-hard-test02-q11": {
   "sinif": 2,
@@ -74,7 +80,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.2
  },
  "2-kagit-katlama-hard-test01-q07": {
   "sinif": 2,
@@ -85,7 +92,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.12
  },
  "2-kagit-katlama-easy-test06-q15": {
   "sinif": 2,
@@ -96,7 +104,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "2-kagit-katlama-easy-test04-q09": {
   "sinif": 2,
@@ -107,7 +116,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "1-kagit-katlama-medium-test04-q02": {
   "sinif": 1,
@@ -118,7 +128,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.15
  },
  "3-kagit-katlama-medium-test05-q09": {
   "sinif": 3,
@@ -129,7 +140,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "2-kagit-katlama-hard-test01-q13": {
   "sinif": 2,
@@ -140,7 +152,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.35
  },
  "3-kagit-katlama-hard-test02-q01": {
   "sinif": 3,
@@ -151,7 +164,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.23
  },
  "2-kagit-katlama-medium-test01-q05": {
   "sinif": 2,
@@ -162,7 +176,8 @@
   "soruMetni": "Açıldığında nasıl görünür?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.41
  },
  "2-benzesim-easy-test04-q02": {
   "sinif": 2,
@@ -173,7 +188,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-benzesim-easy-test01-q03": {
   "sinif": 1,
@@ -184,7 +200,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-benzesim-easy-test02-q06": {
   "sinif": 1,
@@ -195,7 +212,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-easy-test01-q13": {
   "sinif": 3,
@@ -206,7 +224,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-benzesim-easy-test05-q11": {
   "sinif": 2,
@@ -217,7 +236,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-hard-test02-q01": {
   "sinif": 3,
@@ -228,7 +248,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-benzesim-hard-test07-q10": {
   "sinif": 2,
@@ -239,7 +260,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-benzesim-hard-test01-q02": {
   "sinif": 2,
@@ -250,7 +272,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-benzesim-easy-test05-q05": {
   "sinif": 1,
@@ -261,7 +284,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-benzesim-easy-test07-q15": {
   "sinif": 1,
@@ -272,7 +296,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-benzesim-medium-test05-q02": {
   "sinif": 2,
@@ -283,7 +308,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-hard-test03-q06": {
   "sinif": 3,
@@ -294,7 +320,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-medium-test06-q12": {
   "sinif": 3,
@@ -305,7 +332,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-hard-test06-q06": {
   "sinif": 3,
@@ -316,7 +344,8 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-benzesim-hard-test03-q03": {
   "sinif": 3,
@@ -327,7 +356,200 @@
   "soruMetni": "Kurala göre soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
+ },
+ "1-sahne-medium-020": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-medium-020",
+  "altTip": "sahne-ucan-toplam",
+  "zorluk": "medium",
+  "soruMetni": "Uçan hayvanlar toplam kaç tane?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "2-dikkat-medium-test01-q07": {
+  "sinif": 2,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-medium-test01-q07",
+  "altTip": "kategori-sayma",
+  "zorluk": "medium",
+  "soruMetni": "Aşağıdaki resimlerde kaç tane meyve vardır?",
+  "sikSayisi": 4,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.0
+ },
+ "1-dikkat-medium-test04-q10": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-medium-test04-q10",
+  "altTip": "siralama-uymayan",
+  "zorluk": "medium",
+  "soruMetni": "Bu sıraya uymayan görsel hangisidir?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 3.39
+ },
+ "3-dikkat-hard-test02-q04": {
+  "sinif": 3,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-hard-test02-q04",
+  "altTip": "eslesen-cift",
+  "zorluk": "hard",
+  "soruMetni": "Aşağıdaki resimlerin içinde hangisi iki kez vardır?",
+  "sikSayisi": 4,
+  "dogru": "D",
+  "hafiza": null,
+  "oran": 1.2
+ },
+ "1-sahne-medium-027": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-medium-027",
+  "altTip": "sahne-renk-sayma",
+  "zorluk": "medium",
+  "soruMetni": "Sahnede kaç tane kırmızı çiçek var?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "1-sahne-medium-017": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-medium-017",
+  "altTip": "sahne-en-az",
+  "zorluk": "medium",
+  "soruMetni": "Sahnede hangisinden en az var?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "1-sahne-medium-028": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-medium-028",
+  "altTip": "sahne-birebir-eslesme",
+  "zorluk": "medium",
+  "soruMetni": "Her arı bir büyük çiçeğe konarsa kaç büyük çiçek boş kalır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "2-dikkat-medium-test03-q13": {
+  "sinif": 2,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-medium-test03-q13",
+  "altTip": "konum-bulma",
+  "zorluk": "medium",
+  "soruMetni": "Soldan 3. resim hangisiydi?",
+  "sikSayisi": 4,
+  "dogru": "C",
+  "hafiza": 3,
+  "oran": 3.39
+ },
+ "3-dikkat-easy-test06-q06": {
+  "sinif": 3,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-easy-test06-q06",
+  "altTip": "azinlik-sayma",
+  "zorluk": "easy",
+  "soruMetni": "En az olan kategoriden kaç tane vardır?",
+  "sikSayisi": 4,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.24
+ },
+ "1-sahne-easy-026": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-easy-026",
+  "altTip": "sahne-renk-tur",
+  "zorluk": "easy",
+  "soruMetni": "Sahnede kaç tane turuncu balık var?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "1-sahne-easy-018": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-easy-018",
+  "altTip": "sahne-hic-yok",
+  "zorluk": "easy",
+  "soruMetni": "Sahnede hangisi hiç yok?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "1-sahne-easy-034": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-easy-034",
+  "altTip": "sahne-kac-fazla",
+  "zorluk": "easy",
+  "soruMetni": "Penguenler tavşanlardan kaç tane fazladır?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "2-dikkat-medium-test02-q03": {
+  "sinif": 2,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-medium-test02-q03",
+  "altTip": "eslesen-cift",
+  "zorluk": "medium",
+  "soruMetni": "Aşağıdaki resimlerin içinde hangisi iki kez vardır?",
+  "sikSayisi": 4,
+  "dogru": "D",
+  "hafiza": null,
+  "oran": 1.0
+ },
+ "1-sahne-medium-024": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "sahne-medium-024",
+  "altTip": "sahne-kac-kati",
+  "zorluk": "medium",
+  "soruMetni": "Mor çiçekler, kırmızı çiçeklerin kaç katıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.1
+ },
+ "2-dikkat-medium-test05-q10": {
+  "sinif": 2,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-medium-test05-q10",
+  "altTip": "kategori-eksik",
+  "zorluk": "medium",
+  "soruMetni": "Aşağıdaki hayvanlardan hangisi resimde yoktu?",
+  "sikSayisi": 4,
+  "dogru": "A",
+  "hafiza": 3,
+  "oran": 1.32
+ },
+ "3-dikkat-hard-test07-q08": {
+  "sinif": 3,
+  "kategori": "dikkat-hafiza/dikkat-sorulari",
+  "id": "dikkat-hard-test07-q08",
+  "altTip": "art-arda-cift",
+  "zorluk": "hard",
+  "soruMetni": "Yan yana iki kez geçen ikon hangisiydi?",
+  "sikSayisi": 4,
+  "dogru": "D",
+  "hafiza": 3,
+  "oran": 3.87
  },
  "1-fark-easy-001": {
   "sinif": 1,
@@ -338,7 +560,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-easy-021": {
   "sinif": 2,
@@ -349,7 +572,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "1-fark-medium-030": {
   "sinif": 1,
@@ -360,7 +584,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-medium-008": {
   "sinif": 2,
@@ -371,7 +596,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "3-fark-hard-049": {
   "sinif": 3,
@@ -382,7 +608,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "3-fark-hard-027": {
   "sinif": 3,
@@ -393,7 +620,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-hard-048": {
   "sinif": 2,
@@ -404,7 +632,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "1-fark-easy-038": {
   "sinif": 1,
@@ -415,7 +644,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-easy-013": {
   "sinif": 2,
@@ -426,7 +656,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "3-fark-easy-033": {
   "sinif": 3,
@@ -437,7 +668,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-medium-041": {
   "sinif": 2,
@@ -448,7 +680,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "3-fark-medium-051": {
   "sinif": 3,
@@ -459,7 +692,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "1-fark-hard-011": {
   "sinif": 1,
@@ -470,7 +704,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "2-fark-hard-041": {
   "sinif": 2,
@@ -481,7 +716,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "3-fark-hard-052": {
   "sinif": 3,
@@ -492,7 +728,8 @@
   "soruMetni": "İki resim arasında kaç fark var?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.55
  },
  "1-golge-easy-084": {
   "sinif": 1,
@@ -503,7 +740,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "2-golge-easy-075": {
   "sinif": 2,
@@ -514,7 +752,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "3-golge-easy-005": {
   "sinif": 3,
@@ -525,7 +764,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "1-golge-medium-014": {
   "sinif": 1,
@@ -536,7 +776,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
  },
  "1-golge-medium-043": {
   "sinif": 1,
@@ -547,7 +788,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
  },
  "1-golge-hard-013": {
   "sinif": 1,
@@ -558,7 +800,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.0
  },
  "1-golge-hard-029": {
   "sinif": 1,
@@ -569,7 +812,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.0
  },
  "2-golge-easy-007": {
   "sinif": 2,
@@ -580,7 +824,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "3-golge-easy-085": {
   "sinif": 3,
@@ -591,7 +836,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "1-golge-easy-061": {
   "sinif": 1,
@@ -602,7 +848,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "3-golge-easy-043": {
   "sinif": 3,
@@ -613,7 +860,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnenin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.67
  },
  "1-golge-medium-027": {
   "sinif": 1,
@@ -624,7 +872,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
  },
  "3-golge-medium-096": {
   "sinif": 3,
@@ -635,7 +884,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
  },
  "1-golge-medium-004": {
   "sinif": 1,
@@ -646,7 +896,8 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
  },
  "1-golge-medium-035": {
   "sinif": 1,
@@ -657,7 +908,200 @@
   "soruMetni": "Aşağıdakilerden hangisi bu nesnelerin gölgesidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.33
+ },
+ "1-hangisi-medium-test01-q14": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-medium-test01-q14",
+  "altTip": "kategori-bozuk",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-medium-test01-q07": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-medium-test01-q07",
+  "altTip": "kategori-bozuk",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-medium-test04-q11": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-medium-test04-q11",
+  "altTip": "sub-kat-bozuk",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-easy-test03-q02": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-easy-test03-q02",
+  "altTip": "sayi-bozuk",
+  "zorluk": "easy",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-hard-test06-q14": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-hard-test06-q14",
+  "altTip": "pattern-bozuk",
+  "zorluk": "hard",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hfarkli-medium-010": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hfarkli-medium-010",
+  "altTip": "ic-ice-kurali",
+  "zorluk": "medium",
+  "soruMetni": "Hangisi kurala uymaz?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 1.96
+ },
+ "1-hfarkli-medium-040": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hfarkli-medium-040",
+  "altTip": "siralama-kurali",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup kurala uymaz?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 2.95
+ },
+ "1-esbul-hard-001": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "esbul-hard-001",
+  "altTip": "es-bulma-ev",
+  "zorluk": "hard",
+  "soruMetni": "Hangi iki ev tıpatıp aynıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.42
+ },
+ "1-hfarkli-easy-009": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hfarkli-easy-009",
+  "altTip": "ic-ice-kurali",
+  "zorluk": "easy",
+  "soruMetni": "Hangisi kurala uymaz?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 1.96
+ },
+ "1-hangisi-easy-test04-q12": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-easy-test04-q12",
+  "altTip": "sub-kat-bozuk",
+  "zorluk": "easy",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-medium-test03-q07": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-medium-test03-q07",
+  "altTip": "tekrar-bozuk",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-easy-test06-q02": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-easy-test06-q02",
+  "altTip": "eslesme-bozuk",
+  "zorluk": "easy",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "C",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hangisi-medium-test07-q12": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hangisi-medium-test07-q12",
+  "altTip": "pattern-bozuk",
+  "zorluk": "medium",
+  "soruMetni": "Hangi grup diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "B",
+  "hafiza": null,
+  "oran": 2.44
+ },
+ "1-hfarkli-medium-031": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hfarkli-medium-031",
+  "altTip": "desen-farki-ev",
+  "zorluk": "medium",
+  "soruMetni": "Hangi ev diğerlerinden farklıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.96
+ },
+ "1-esbul-medium-013": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "esbul-medium-013",
+  "altTip": "es-bulma-kek",
+  "zorluk": "medium",
+  "soruMetni": "Hangi iki kek tıpatıp aynıdır?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.09
+ },
+ "1-hfarkli-hard-007": {
+  "sinif": 1,
+  "kategori": "dikkat-hafiza/hangisi-farkli",
+  "id": "hfarkli-hard-007",
+  "altTip": "simetri-kurali",
+  "zorluk": "hard",
+  "soruMetni": "Hangi kelebeğin kanatları birbirine uymuyor?",
+  "sikSayisi": 3,
+  "dogru": "A",
+  "hafiza": null,
+  "oran": 1.96
  },
  "2-hafiza-medium-test02-q06": {
   "sinif": 2,
@@ -668,7 +1112,8 @@
   "soruMetni": "Aşağıdakilerden hangisi önceki görselde vardı?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.0
  },
  "1-hafiza-easy-test02-q10": {
   "sinif": 1,
@@ -679,7 +1124,8 @@
   "soruMetni": "Aşağıdakilerden hangisi önceki görselde vardı?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.32
  },
  "2-hafiza-medium-test03-q07": {
   "sinif": 2,
@@ -690,7 +1136,8 @@
   "soruMetni": "Aşağıdakilerden hangisi önceki görselde yoktu?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.0
  },
  "3-hafiza-hard-test02-q04": {
   "sinif": 3,
@@ -701,7 +1148,8 @@
   "soruMetni": "Önceki görselde toplam kaç ikon vardı?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.24
  },
  "2-hafiza-medium-test01-q09": {
   "sinif": 2,
@@ -712,7 +1160,8 @@
   "soruMetni": "Önceki görselde kaç tane hayvan vardı?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.0
  },
  "3-hafiza-medium-test04-q10": {
   "sinif": 3,
@@ -723,7 +1172,8 @@
   "soruMetni": "Önceki görselde şeftali resminden hemen sonra hangi ikon vardı?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 3.39
  },
  "1-hafiza-hard-test06-q08": {
   "sinif": 1,
@@ -734,7 +1184,8 @@
   "soruMetni": "Önceki resimde alt ortada hangi ikon vardı?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.0
  },
  "3-hafsahne-hard-047": {
   "sinif": 3,
@@ -745,7 +1196,8 @@
   "soruMetni": "Önceki sahnedeki kelebek ne renkti?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.1
  },
  "1-hafsahne-easy-029": {
   "sinif": 1,
@@ -756,7 +1208,8 @@
   "soruMetni": "Önceki sahnede hangisi yoktu?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": 7
+  "hafiza": 7,
+  "oran": 1.1
  },
  "1-hafsahne-medium-060": {
   "sinif": 1,
@@ -767,7 +1220,8 @@
   "soruMetni": "Önceki sahnede hangisi vardı?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": 6
+  "hafiza": 6,
+  "oran": 1.1
  },
  "2-hafsahne-hard-040": {
   "sinif": 2,
@@ -778,7 +1232,8 @@
   "soruMetni": "Önceki sahnede kaç tane kuş vardı?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.1
  },
  "3-hafiza-medium-test05-q04": {
   "sinif": 3,
@@ -789,7 +1244,8 @@
   "soruMetni": "Gösterilen sırada soldan 6. ikon hangisiydi?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 3.39
  },
  "3-hafiza-easy-test05-q10": {
   "sinif": 3,
@@ -800,7 +1256,8 @@
   "soruMetni": "Önceki görselde akrep ile kurt arasında kaç ikon vardı?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 2.91
  },
  "1-hafiza-hard-test07-q15": {
   "sinif": 1,
@@ -811,7 +1268,8 @@
   "soruMetni": "Orta sırada aşağıdakilerden hangi ikon vardı?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.24
  },
  "2-hafiza-medium-test04-q05": {
   "sinif": 2,
@@ -822,7 +1280,8 @@
   "soruMetni": "Önceki görselde hangi kategoriden hiç ikon yoktu?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 1.63
  },
  "2-hafiza-easy-test07-q05": {
   "sinif": 2,
@@ -833,7 +1292,8 @@
   "soruMetni": "Önceki görselde otobüs resminin solunda hangi ikon vardı?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": 5
+  "hafiza": 5,
+  "oran": 2.91
  },
  "3-kup-medium-016": {
   "sinif": 3,
@@ -844,7 +1304,8 @@
   "soruMetni": "Bu yığında kaç küp vardır?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.71
  },
  "1-kup-easy-144": {
   "sinif": 1,
@@ -855,7 +1316,8 @@
   "soruMetni": "Bu yığında kaç küp vardır?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.88
  },
  "2-kup-hard-112": {
   "sinif": 2,
@@ -866,7 +1328,8 @@
   "soruMetni": "Yığında kaç tane mor küp vardır?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.71
  },
  "3-kup-hard-075": {
   "sinif": 3,
@@ -877,7 +1340,8 @@
   "soruMetni": "Bu yığını 2x2x2 küp yapmak için kaç küp daha gereklidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.88
  },
  "2-kup-medium-109": {
   "sinif": 2,
@@ -888,7 +1352,8 @@
   "soruMetni": "Bu yığına önden bakıldığında hangi şekil görülür?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.71
  },
  "2-kup-medium-009": {
   "sinif": 2,
@@ -899,7 +1364,8 @@
   "soruMetni": "Bu açınım kapatılınca hangi yüzler karşılıklı gelir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.29
  },
  "1-kup-hard-029": {
   "sinif": 1,
@@ -910,7 +1376,8 @@
   "soruMetni": "Aşağıdaki açınım kapatıldığında hangi küpe dönüşür?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.29
  },
  "3-kup-medium-125": {
   "sinif": 3,
@@ -921,7 +1388,8 @@
   "soruMetni": "Hangisi katlanınca küp oluşturur?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.8
  },
  "1-kup-easy-120": {
   "sinif": 1,
@@ -932,7 +1400,8 @@
   "soruMetni": "Yığında kaç tane kırmızı küp vardır?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.81
  },
  "3-kup-medium-026": {
   "sinif": 3,
@@ -943,7 +1412,8 @@
   "soruMetni": "Bu yığını 3x3 kare yapmak için kaç küp daha gereklidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.03
  },
  "2-kup-medium-005": {
   "sinif": 2,
@@ -954,7 +1424,8 @@
   "soruMetni": "Bu yığına önden bakıldığında hangi şekil görülür?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.65
  },
  "2-kup-easy-087": {
   "sinif": 2,
@@ -965,7 +1436,8 @@
   "soruMetni": "Bu açınım kapatılınca hangi yüzler karşılıklı gelir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.29
  },
  "1-kup-easy-068": {
   "sinif": 1,
@@ -976,7 +1448,8 @@
   "soruMetni": "Aşağıdaki açınım kapatıldığında hangi küpe dönüşür?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.29
  },
  "3-kup-hard-055": {
   "sinif": 3,
@@ -987,7 +1460,8 @@
   "soruMetni": "Hangisi katlanınca küp oluşturur?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.8
  },
  "3-kup-hard-074": {
   "sinif": 3,
@@ -998,7 +1472,8 @@
   "soruMetni": "Bu yığında kaç küp vardır?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.82
  },
  "2-kus-bakisi-easy-test01-q02": {
   "sinif": 2,
@@ -1009,7 +1484,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.46
  },
  "1-kus-bakisi-easy-test01-q01": {
   "sinif": 1,
@@ -1020,7 +1496,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.66
  },
  "2-kus-bakisi-medium-test01-q01": {
   "sinif": 2,
@@ -1031,7 +1508,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.62
  },
  "2-kus-bakisi-hard-test01-q04": {
   "sinif": 2,
@@ -1042,7 +1520,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.71
  },
  "3-kus-bakisi-hard-test01-q01": {
   "sinif": 3,
@@ -1053,7 +1532,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.46
  },
  "3-kus-bakisi-medium-test01-q14": {
   "sinif": 3,
@@ -1064,7 +1544,8 @@
   "soruMetni": "Masanın üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.4
  },
  "2-kus-bakisi-easy-test01-q08": {
   "sinif": 2,
@@ -1075,7 +1556,8 @@
   "soruMetni": "Bu cisimlerin önden görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.17
  },
  "1-kus-bakisi-hard-test01-q02": {
   "sinif": 1,
@@ -1086,7 +1568,8 @@
   "soruMetni": "Karşı taraftan bakan kişi cisimleri hangi sırayla görür?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.56
  },
  "2-kus-bakisi-easy-test05-q06": {
   "sinif": 2,
@@ -1097,7 +1580,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.66
  },
  "1-kus-bakisi-easy-test01-q09": {
   "sinif": 1,
@@ -1108,7 +1592,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.88
  },
  "3-kus-bakisi-easy-test01-q03": {
   "sinif": 3,
@@ -1119,7 +1604,8 @@
   "soruMetni": "Bu cisim kuma bastırılınca kumda hangi iz kalır?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "3-kus-bakisi-medium-test01-q05": {
   "sinif": 3,
@@ -1130,7 +1616,8 @@
   "soruMetni": "Bu şeklin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.75
  },
  "2-kus-bakisi-medium-test01-q10": {
   "sinif": 2,
@@ -1141,7 +1628,8 @@
   "soruMetni": "Üstten bakınca kaç disk görünmez?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.75
  },
  "3-kus-bakisi-medium-test01-q07": {
   "sinif": 3,
@@ -1152,7 +1640,8 @@
   "soruMetni": "Bu cisimlerin önden görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.23
  },
  "1-kus-bakisi-hard-test01-q06": {
   "sinif": 1,
@@ -1163,7 +1652,8 @@
   "soruMetni": "Masanın üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.48
  },
  "3-kus-bakisi-hard-test01-q12": {
   "sinif": 3,
@@ -1174,7 +1664,8 @@
   "soruMetni": "Bu üç kulenin üstten (kuş bakışı) görünüşü hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 7.71
  },
  "1-lab-easy-002": {
   "sinif": 1,
@@ -1185,7 +1676,8 @@
   "soruMetni": "Hangi girişten girersek havuca ulaşırız?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "1-lab-easy-010": {
   "sinif": 1,
@@ -1196,7 +1688,8 @@
   "soruMetni": "Hangi girişten girersek yıldıza ulaşırız?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "1-lab-medium-016": {
   "sinif": 1,
@@ -1207,7 +1700,8 @@
   "soruMetni": "Hangi girişten girersek yıldıza ulaşırız?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.16
  },
  "1-lab-medium-009": {
   "sinif": 1,
@@ -1218,7 +1712,8 @@
   "soruMetni": "Hangi girişten girersek keke ulaşırız?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.16
  },
  "1-lab-hard-029": {
   "sinif": 1,
@@ -1229,7 +1724,8 @@
   "soruMetni": "Hangi girişten girersek çiçeğe ulaşırız?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.2
  },
  "1-lab-hard-019": {
   "sinif": 1,
@@ -1240,7 +1736,8 @@
   "soruMetni": "Hangi girişten girersek peynire ulaşırız?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.2
  },
  "1-lab-hard-024": {
   "sinif": 1,
@@ -1251,7 +1748,8 @@
   "soruMetni": "Hangi girişten girersek balığa ulaşırız?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.2
  },
  "1-lab-easy-021": {
   "sinif": 1,
@@ -1262,7 +1760,8 @@
   "soruMetni": "Hangi girişten girersek keke ulaşırız?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "1-lab-easy-029": {
   "sinif": 1,
@@ -1273,7 +1772,8 @@
   "soruMetni": "Hangi girişten girersek çiçeğe ulaşırız?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "1-lab-easy-004": {
   "sinif": 1,
@@ -1284,7 +1784,8 @@
   "soruMetni": "Hangi girişten girersek yıldıza ulaşırız?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.1
  },
  "1-lab-medium-012": {
   "sinif": 1,
@@ -1295,7 +1796,8 @@
   "soruMetni": "Hangi girişten girersek balığa ulaşırız?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.16
  },
  "1-lab-medium-020": {
   "sinif": 1,
@@ -1306,7 +1808,8 @@
   "soruMetni": "Hangi girişten girersek havuca ulaşırız?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.16
  },
  "1-lab-medium-004": {
   "sinif": 1,
@@ -1317,7 +1820,8 @@
   "soruMetni": "Hangi girişten girersek yıldıza ulaşırız?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.16
  },
  "1-lab-hard-026": {
   "sinif": 1,
@@ -1328,7 +1832,8 @@
   "soruMetni": "Hangi girişten girersek havuca ulaşırız?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.2
  },
  "1-lab-hard-015": {
   "sinif": 1,
@@ -1339,7 +1844,8 @@
   "soruMetni": "Hangi girişten girersek keke ulaşırız?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.2
  },
  "2-terazi-medium-008": {
   "sinif": 2,
@@ -1350,7 +1856,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.25
  },
  "1-terazi-easy-008": {
   "sinif": 1,
@@ -1361,7 +1868,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.17
  },
  "1-terazi-easy-012": {
   "sinif": 1,
@@ -1372,7 +1880,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.25
  },
  "2-terazi-medium-087": {
   "sinif": 2,
@@ -1383,7 +1892,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.42
  },
  "2-terazi-medium-020": {
   "sinif": 2,
@@ -1394,7 +1904,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.31
  },
  "3-terazi-hard-042": {
   "sinif": 3,
@@ -1405,7 +1916,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.44
  },
  "1-terazi-easy-048": {
   "sinif": 1,
@@ -1416,7 +1928,8 @@
   "soruMetni": "Terazilere göre şekillerin ağırdan hafife sıralanışı hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.22
  },
  "3-terazi-hard-074": {
   "sinif": 3,
@@ -1427,7 +1940,8 @@
   "soruMetni": "Terazilere göre şekillerin ağırdan hafife sıralanışı hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.28
  },
  "1-terazi-easy-019": {
   "sinif": 1,
@@ -1438,7 +1952,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.17
  },
  "1-terazi-easy-092": {
   "sinif": 1,
@@ -1449,7 +1964,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.25
  },
  "1-terazi-easy-002": {
   "sinif": 1,
@@ -1460,7 +1976,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.28
  },
  "1-terazi-easy-030": {
   "sinif": 1,
@@ -1471,7 +1988,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.42
  },
  "2-terazi-medium-057": {
   "sinif": 2,
@@ -1482,7 +2000,8 @@
   "soruMetni": "Terazilere göre şekillerin ağırdan hafife sıralanışı hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.28
  },
  "2-terazi-medium-036": {
   "sinif": 2,
@@ -1493,7 +2012,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.43
  },
  "3-terazi-hard-032": {
   "sinif": 3,
@@ -1504,7 +2024,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.31
  },
  "3-terazi-hard-066": {
   "sinif": 3,
@@ -1515,7 +2036,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.41
  },
  "2-matris-hard-022": {
   "sinif": 2,
@@ -1526,7 +2048,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-matris-easy-160": {
   "sinif": 1,
@@ -1537,7 +2060,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-matris-medium-177": {
   "sinif": 2,
@@ -1548,7 +2072,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-matris-medium-173": {
   "sinif": 2,
@@ -1559,7 +2084,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-medium-019": {
   "sinif": 3,
@@ -1570,7 +2096,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-matris-medium-031": {
   "sinif": 1,
@@ -1581,7 +2108,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-matris-medium-056": {
   "sinif": 2,
@@ -1592,7 +2120,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-hard-043": {
   "sinif": 3,
@@ -1603,7 +2132,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-matris-easy-052": {
   "sinif": 1,
@@ -1614,7 +2144,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-matris-medium-126": {
   "sinif": 1,
@@ -1625,7 +2156,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-matris-easy-049": {
   "sinif": 2,
@@ -1636,7 +2168,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-easy-015": {
   "sinif": 3,
@@ -1647,7 +2180,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-medium-023": {
   "sinif": 3,
@@ -1658,7 +2192,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-matris-hard-062": {
   "sinif": 2,
@@ -1669,7 +2204,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-hard-178": {
   "sinif": 3,
@@ -1680,7 +2216,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-matris-medium-054": {
   "sinif": 3,
@@ -1691,7 +2228,8 @@
   "soruMetni": "Soru işareti yerine ne gelmelidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-olay-easy-002": {
   "sinif": 1,
@@ -1702,7 +2240,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "2-olay-easy-004": {
   "sinif": 2,
@@ -1713,7 +2252,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "3-olay-medium-015": {
   "sinif": 3,
@@ -1724,7 +2264,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "1-olay-medium-012": {
   "sinif": 1,
@@ -1735,7 +2276,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "2-olay-hard-013": {
   "sinif": 2,
@@ -1746,7 +2288,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.72
  },
  "3-olay-hard-007": {
   "sinif": 3,
@@ -1757,7 +2300,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.72
  },
  "1-olay-hard-025": {
   "sinif": 1,
@@ -1768,7 +2312,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.72
  },
  "1-olay-easy-001": {
   "sinif": 1,
@@ -1779,7 +2324,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "2-olay-medium-006": {
   "sinif": 2,
@@ -1790,7 +2336,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "3-olay-easy-021": {
   "sinif": 3,
@@ -1801,7 +2348,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "2-olay-medium-011": {
   "sinif": 2,
@@ -1812,7 +2360,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "3-olay-medium-004": {
   "sinif": 3,
@@ -1823,7 +2372,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "1-olay-easy-016": {
   "sinif": 1,
@@ -1834,7 +2384,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.8
  },
  "3-olay-hard-012": {
   "sinif": 3,
@@ -1845,7 +2396,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.72
  },
  "2-olay-hard-009": {
   "sinif": 2,
@@ -1856,7 +2408,8 @@
   "soruMetni": "Olayların doğru sırası hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.72
  },
  "3-oruntu-medium-069": {
   "sinif": 3,
@@ -1867,7 +2420,8 @@
   "soruMetni": "Örüntünün devamında hangisi gelir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.31
  },
  "1-oruntu-medium-163": {
   "sinif": 1,
@@ -1878,7 +2432,8 @@
   "soruMetni": "Deseni sürdüren hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.62
  },
  "1-oruntu-medium-078": {
   "sinif": 1,
@@ -1889,7 +2444,8 @@
   "soruMetni": "Satırlardaki kurala göre '?' satırı hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.91
  },
  "1-oruntu-easy-028": {
   "sinif": 1,
@@ -1900,7 +2456,8 @@
   "soruMetni": "Sayı örüntüsünde sıradaki hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-oruntu-easy-043": {
   "sinif": 2,
@@ -1911,7 +2468,8 @@
   "soruMetni": "Sayı örüntüsünde sıradaki hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "3-oruntu-medium-037": {
   "sinif": 3,
@@ -1922,7 +2480,8 @@
   "soruMetni": "Sayı örüntüsünde sıradaki hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.32
  },
  "3-oruntu-medium-056": {
   "sinif": 3,
@@ -1933,7 +2492,8 @@
   "soruMetni": "Harf örüntüsünde sıradaki hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-oruntu-hard-016": {
   "sinif": 2,
@@ -1944,7 +2504,8 @@
   "soruMetni": "Örüntünün devamında hangisi gelir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 5.44
  },
  "3-oruntu-easy-006": {
   "sinif": 3,
@@ -1955,7 +2516,8 @@
   "soruMetni": "Örüntünün devamında hangisi gelir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 5.44
  },
  "1-oruntu-medium-169": {
   "sinif": 1,
@@ -1966,7 +2528,8 @@
   "soruMetni": "Örüntüde boşluğa hangisi gelmelidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.97
  },
  "1-oruntu-medium-129": {
   "sinif": 1,
@@ -1977,7 +2540,8 @@
   "soruMetni": "Örüntünün devamında hangisi gelir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-oruntu-medium-025": {
   "sinif": 2,
@@ -1988,7 +2552,8 @@
   "soruMetni": "Sayı örüntüsünde sıradaki hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "3-oruntu-medium-047": {
   "sinif": 3,
@@ -1999,7 +2564,8 @@
   "soruMetni": "Sayılar bir kurala göre ilerliyor. Boşluğa hangisi gelmelidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-oruntu-medium-055": {
   "sinif": 2,
@@ -2010,7 +2576,8 @@
   "soruMetni": "Harfler bir kurala göre ilerliyor. Sıradaki ne olmalıdır?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-oruntu-medium-146": {
   "sinif": 2,
@@ -2021,7 +2588,8 @@
   "soruMetni": "Kurala göre boşluğa hangisi gelir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.15
  },
  "3-oruntu-medium-016": {
   "sinif": 3,
@@ -2032,7 +2600,8 @@
   "soruMetni": "Deseni sürdüren hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 4.55
  },
  "2-sekil-tamamlama-medium-094": {
   "sinif": 2,
@@ -2043,7 +2612,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-sekil-tamamlama-easy-019": {
   "sinif": 1,
@@ -2054,7 +2624,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-sekil-tamamlama-hard-035": {
   "sinif": 3,
@@ -2065,7 +2636,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-sekil-tamamlama-easy-060": {
   "sinif": 2,
@@ -2076,7 +2648,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-sekil-tamamlama-easy-007": {
   "sinif": 3,
@@ -2087,7 +2660,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.0
  },
  "1-sekil-tamamlama-easy-021": {
   "sinif": 1,
@@ -2098,7 +2672,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-sekil-tamamlama-medium-937": {
   "sinif": 2,
@@ -2109,7 +2684,8 @@
   "soruMetni": "Bu iki parça birleşince hangi şekil oluşur?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.18
  },
  "3-sekil-tamamlama-hard-952": {
   "sinif": 3,
@@ -2120,7 +2696,8 @@
   "soruMetni": "Noktalı çizgi simetri ekseni. Şeklin diğer yarısı hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.5
  },
  "2-sekil-tamamlama-easy-027": {
   "sinif": 2,
@@ -2131,7 +2708,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "2-sekil-tamamlama-hard-046": {
   "sinif": 2,
@@ -2142,7 +2720,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-sekil-tamamlama-medium-072": {
   "sinif": 1,
@@ -2153,7 +2732,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "3-sekil-tamamlama-medium-064": {
   "sinif": 3,
@@ -2164,7 +2744,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-sekil-tamamlama-medium-085": {
   "sinif": 1,
@@ -2175,7 +2756,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.0
  },
  "2-sekil-tamamlama-easy-912": {
   "sinif": 2,
@@ -2186,7 +2768,8 @@
   "soruMetni": "Noktalı çizgi simetri ekseni. Şeklin diğer yarısı hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.5
  },
  "3-sekil-tamamlama-medium-935": {
   "sinif": 3,
@@ -2197,7 +2780,8 @@
   "soruMetni": "Bu iki parça birleşince hangi şekil oluşur?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.18
  },
  "1-sekil-tamamlama-easy-059": {
   "sinif": 1,
@@ -2208,7 +2792,8 @@
   "soruMetni": "Eksik parça hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.0
  },
  "1-sifre-easy-027": {
   "sinif": 1,
@@ -2219,7 +2804,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.54
  },
  "1-sifre-easy-001": {
   "sinif": 1,
@@ -2230,7 +2816,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "2-sifre-medium-012": {
   "sinif": 2,
@@ -2241,7 +2828,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "3-sifre-hard-001": {
   "sinif": 3,
@@ -2252,7 +2840,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "1-sifre-easy-068": {
   "sinif": 1,
@@ -2263,7 +2852,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.54
  },
  "1-sifre-medium-001": {
   "sinif": 1,
@@ -2274,7 +2864,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.54
  },
  "2-sifre-medium-007": {
   "sinif": 2,
@@ -2285,7 +2876,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.57
  },
  "3-sifre-medium-025": {
   "sinif": 3,
@@ -2296,7 +2888,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.22
  },
  "1-sifre-easy-014": {
   "sinif": 1,
@@ -2307,7 +2900,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.54
  },
  "1-sifre-easy-007": {
   "sinif": 1,
@@ -2318,7 +2912,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "1-sifre-easy-004": {
   "sinif": 1,
@@ -2329,7 +2924,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.57
  },
  "1-sifre-easy-002": {
   "sinif": 1,
@@ -2340,7 +2936,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.22
  },
  "2-sifre-hard-030": {
   "sinif": 2,
@@ -2351,7 +2948,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "2-sifre-medium-014": {
   "sinif": 2,
@@ -2362,7 +2960,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 3.22
  },
  "3-sifre-hard-012": {
   "sinif": 3,
@@ -2373,7 +2972,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.95
  },
  "3-sifre-hard-016": {
   "sinif": 3,
@@ -2384,7 +2984,8 @@
   "soruMetni": "Şifreye göre doğru cevap hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 6.57
  },
  "2-yansima-easy-051": {
   "sinif": 2,
@@ -2395,7 +2996,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.55
  },
  "1-yansima-easy-004": {
   "sinif": 1,
@@ -2406,7 +3008,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.55
  },
  "2-yansima-easy-013": {
   "sinif": 2,
@@ -2417,7 +3020,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.55
  },
  "1-yansima-medium-046": {
   "sinif": 1,
@@ -2428,7 +3032,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.74
  },
  "2-yansima-medium-030": {
   "sinif": 2,
@@ -2439,7 +3044,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.74
  },
  "3-yansima-medium-099": {
   "sinif": 3,
@@ -2450,7 +3056,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.68
  },
  "3-yansima-hard-020": {
   "sinif": 3,
@@ -2461,7 +3068,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "C",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.63
  },
  "1-yansima-hard-072": {
   "sinif": 1,
@@ -2472,7 +3080,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.09
  },
  "1-yansima-easy-055": {
   "sinif": 1,
@@ -2483,7 +3092,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.55
  },
  "3-yansima-easy-016": {
   "sinif": 3,
@@ -2494,7 +3104,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.55
  },
  "2-yansima-medium-078": {
   "sinif": 2,
@@ -2505,7 +3116,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "D",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.74
  },
  "3-yansima-medium-096": {
   "sinif": 3,
@@ -2516,7 +3128,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 0.74
  },
  "1-yansima-medium-050": {
   "sinif": 1,
@@ -2527,7 +3140,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.68
  },
  "2-yansima-easy-048": {
   "sinif": 2,
@@ -2538,7 +3152,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.68
  },
  "2-yansima-hard-027": {
   "sinif": 2,
@@ -2549,7 +3164,8 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 4,
   "dogru": "B",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 1.63
  },
  "1-yansima-hard-063": {
   "sinif": 1,
@@ -2560,6 +3176,7 @@
   "soruMetni": "Aynadaki yansıması hangisidir?",
   "sikSayisi": 3,
   "dogru": "A",
-  "hafiza": null
+  "hafiza": null,
+  "oran": 2.09
  }
 }

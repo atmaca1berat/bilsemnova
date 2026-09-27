@@ -1,13 +1,13 @@
 ---
 // Bankadaki bir soruyu gösterir: soru görseli + şıklar. dogruGoster: doğru şıkkı yeşille işaretler.
-import { soru, soruGorseli, HARFLER } from '../data/sorular';
+import { soru, soruGorseli, gorselBicimi, HARFLER } from '../data/sorular';
 interface Props { anahtar: string; dogruGoster?: boolean; kucuk?: boolean; duz?: boolean; }
 const { anahtar, dogruGoster = false, kucuk = false, duz = false } = Astro.props;
 const s = soru(anahtar);
 const siklar = HARFLER.slice(0, s.sikSayisi);
 const zorluk = ({ easy: 'Kolay', medium: 'Orta', hard: 'Zor' } as Record<string, string>)[s.zorluk] ?? s.zorluk;
 ---
-<figure class:list={['soru-karti', { kucuk }]}>
+<figure class:list={['soru-karti', gorselBicimi(anahtar), { kucuk }]}>
   <figcaption class="soru-ust">
     <span>{s.sinif}. sınıf · {zorluk}</span>
     <b>{s.soruMetni}</b>
@@ -37,6 +37,9 @@ const zorluk = ({ easy: 'Kolay', medium: 'Orta', hard: 'Zor' } as Record<string,
   .sik.dogru .harf { color: #0e7a4b; }
   .sik.dogru::after { content: '✓'; position: absolute; right: 8px; top: 4px; font-weight: 900; color: #0e7a4b; }
   .kucuk .soru-gorsel { max-height: 240px; }
+  /* Alt alta iki resim (fark bulma) gibi uzun görseller: yükseklik sınırı genişliği de kısıyor, daha yüksek izin ver. */
+  .gorsel-dik .soru-gorsel { max-height: 640px; }
+  .kucuk.gorsel-dik .soru-gorsel { max-height: 480px; }
   /* Telefonda 4 şık yan yana çok küçülüyor (siluet, simge): 2x2 ızgara. */
   @media (max-width: 520px) {
     .siklar[style*='--adet:4'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }

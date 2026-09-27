@@ -84,7 +84,8 @@ const alistirmalar = konu.bolumler.flatMap((b) => b.bloklar).flatMap((b) => (b.t
     .not :global(.ornek-bas) { break-after: avoid; }
     .not-bolum > h2 { break-after: avoid; }
     .not :global(*) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    /* Yazdırmada yoğun düzen: örnekler daha küçük, iki örnek bir sayfaya sığsın */
+    /* Yazdırmada yoğun düzen: geniş soru görselleri küçük tutulur ki iki örnek bir sayfaya sığsın. Kare sahneler ve
+       uzun görseller (alt alta iki resim) aynı sınırda sayılamayacak kadar küçülüyordu; onlara daha çok yer verilir. */
     .not { gap: 12px; font-size: 10.5pt; }
     .not h1 { font-size: 26pt; }
     .not-bolum { gap: 10px; }
@@ -95,8 +96,12 @@ const alistirmalar = konu.bolumler.flatMap((b) => b.bloklar).flatMap((b) => (b.t
     .not :global(.b-diyagram) { padding: 6px; }
     .not :global(.b-diyagram svg) { max-height: 175px; }
     .not :global(.b-sorugorsel img) { max-height: 150px; }
+    .not :global(.b-sorugorsel.gorsel-kare img) { max-height: 200px; }
+    .not :global(.b-sorugorsel.gorsel-dik img) { max-height: 380px; }
     .not :global(.soru-karti) { gap: 8px; }
     .not :global(.soru-gorsel) { max-height: 150px !important; padding: 6px; }
+    .not :global(.gorsel-kare .soru-gorsel) { max-height: 250px !important; }
+    .not :global(.gorsel-dik .soru-gorsel) { max-height: 500px !important; }
     .not :global(.siklar) { width: 70%; justify-self: center; gap: 8px; }
     .not :global(.sik) { padding: 16px 6px 6px; border-radius: 10px; }
     .not :global(.cozum-ic) { padding: 10px 14px; gap: 8px; }
@@ -106,5 +111,7 @@ const alistirmalar = konu.bolumler.flatMap((b) => b.bloklar).flatMap((b) => (b.t
     .not :global(.b-alistirma > li) { padding: 10px; }
     .not :global(.b-alistirma .siklar) { width: 100%; }
     .not :global(.b-alistirma .soru-gorsel) { max-height: 120px !important; }
+    .not :global(.b-alistirma .gorsel-kare .soru-gorsel) { max-height: 210px !important; }
+    .not :global(.b-alistirma .gorsel-dik .soru-gorsel) { max-height: 400px !important; }
   }
 </style>

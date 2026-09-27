@@ -4,7 +4,7 @@ import Temel from '../../../layouts/Temel.astro';
 import { KONULAR } from '../../../data/konular';
 import { DIYAGRAM_SETLERI } from '../../../data/diyagramlar';
 import type { Konu } from '../../../data/konu-tipleri';
-import { soru, soruGorseli, HARFLER } from '../../../data/sorular';
+import { soru, soruGorseli, gorselBicimi, HARFLER } from '../../../data/sorular';
 import { SAYILAR } from '../../../data/site';
 
 export function getStaticPaths() {
@@ -67,7 +67,7 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
                   {s.ust && <span class="s-cip sari">{s.ust.toLocaleUpperCase('tr')}</span>}
                   <h2>{s.baslik}</h2>
                 </div>
-                <div class="panel soru-panel">
+                <div class:list={['panel soru-panel', gorselBicimi(s.soru)]}>
                   <img class="soru-kok" src={soruGorseli(s.soru, 'soru')} alt="Soru görseli" />
                   <ol class="s-siklar" style={`--adet:${siklar(s.soru).length}`}>
                     {siklar(s.soru).map((h) => <li><b>{h}</b><img src={soruGorseli(s.soru, h.toLowerCase() as 'a')} alt={`${h} şıkkı`} /></li>)}
@@ -79,7 +79,7 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
 
             {s.t === 'cevap' && (
               <div class="cevap-slayt">
-                <div class="panel cevap-panel">
+                <div class:list={['panel cevap-panel', gorselBicimi(s.soru)]}>
                   <img class="soru-kok" src={soruGorseli(s.soru, 'soru')} alt="Soru görseli" />
                   <ol class="s-siklar" style={`--adet:${siklar(s.soru).length}`}>
                     {siklar(s.soru).map((h) => (
@@ -217,6 +217,8 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
   .panel { background: #fff; border-radius: 1.6cqw; padding: 1.4cqw; box-shadow: 0 1.6cqw 4cqw rgba(0, 0, 0, 0.35); display: grid; place-items: center; min-height: 0; }
   .panel img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .panel.diyagram :global(svg) { width: 100%; height: auto; max-height: 30cqw; }
+  /* Metin slaytındaki soru görseli sütun genişliğine yayılıyor; uzun görsel (alt alta iki resim) slayttan taşıyordu. */
+  .metin .panel > img { max-height: 40cqw; }
 
   .kapak { display: grid; align-content: center; justify-items: start; gap: 0.6cqw; padding-left: 1cqw; }
   .kapak p { font-size: 2.6cqw; font-weight: 800; color: var(--metin-2); margin-top: 1cqw; }
@@ -252,6 +254,15 @@ const siklar = (anahtar: string) => HARFLER.slice(0, soru(anahtar).sikSayisi);
   .cevap-panel .soru-kok { max-height: 17cqw !important; }
   .cevap-panel .s-siklar li { height: 10.5cqw; }
   .cevap-panel .s-siklar li img { max-height: 7.8cqw; }
+  /* Uzun soru görseli (alt alta iki resim): şıklar altına gelince 20cqw'ye sıkışıyordu. Görsel solda, şıklar sağda. */
+  .soru-panel.gorsel-dik, .cevap-panel.gorsel-dik { grid-template-columns: auto minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); gap: 2.4cqw; }
+  /* Yüzdeli max-width 'auto' sütunda görseli sıfıra büzüyor: yükseklik sabit, genişlik orandan gelsin. */
+  .soru-panel.gorsel-dik .soru-kok { height: 31cqw; width: auto; max-width: none; max-height: none !important; }
+  .cevap-panel.gorsel-dik .soru-kok { height: 29cqw; width: auto; max-width: none; max-height: none !important; }
+  .cevap-panel.gorsel-dik .s-siklar { grid-template-columns: 1fr; }
+  .cevap-panel.gorsel-dik .s-siklar[style*='--adet:4'] { grid-template-columns: 1fr 1fr; }
+  .cevap-panel.gorsel-dik .s-siklar li { height: 8.4cqw; }
+  .cevap-panel.gorsel-dik .s-siklar li img { max-height: 6cqw; }
   .cevap-metin { display: grid; gap: 1.4cqw; justify-items: start; }
   .s-adimlar { margin: 0; padding: 0; list-style: none; counter-reset: a; display: grid; gap: 1.2cqw; }
   .s-adimlar li { counter-increment: a; position: relative; padding-left: 4cqw; font-size: 1.9cqw; font-weight: 800; line-height: 1.35; color: var(--metin-2); }

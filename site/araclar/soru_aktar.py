@@ -7,7 +7,7 @@ Listeler: araclar/soru_listesi.txt ve araclar/sorular/*.txt — her satır "sın
 (# ile başlayan kısım yorum). Aynı soru birden çok listede olabilir.
 Çıktı:
   public/soru/<sınıf>-<id>/soru.svg, a.svg, b.svg, c.svg[, d.svg]  (+ aynı adla .jpg: PDF için düz kopya)
-  src/data/sorular.json  → {"<sınıf>-<id>": {sinif, kategori, id, altTip, zorluk, soruMetni, sikSayisi, dogru, hafiza}}
+  src/data/sorular.json  → {"<sınıf>-<id>": {sinif, kategori, id, altTip, zorluk, soruMetni, sikSayisi, dogru, hafiza, oran}}
 
 Bankadaki bütün görüntü biçimleri SVG'ye çevrilir (uygulamadaki visual_question_display.dart ile aynı
 yerleşim): svg, icon-stage (panel + simge + yazı), composite (satır/sütun/üst üste simge, simge dizisi,
@@ -290,12 +290,15 @@ def main():
             elif not os.path.exists(yol[:-4] + '.jpg'):
                 degisen.append(yol)
         dsp = soru['display']
+        gen, yuk = svg_boyut(parcalar[0][1])
         dizin[anahtar] = {
             'sinif': sinif, 'kategori': kategori, 'id': soru_id, 'altTip': soru.get('subType'),
             'zorluk': zorluk, 'soruMetni': soru.get('questionText', ''), 'sikSayisi': len(soru['options']),
             'dogru': HARF[soru['correctIndex']].upper(),
             # Hafıza sorularında görsel uygulamada bu kadar saniye gösterilip kapanır.
             'hafiza': dsp.get('memoryDuration', 10) if (dsp.get('memoryMode') or dsp.get('type') == 'memory') else None,
+            # Soru görselinin en/boy oranı: alt alta iki resim gibi uzun görseller sayfada daha yüksek gösterilir.
+            'oran': round(gen / yuk, 2),
         }
     with open(os.path.join(SITE, 'src', 'data', 'sorular.json'), 'w', encoding='utf-8') as f:
         json.dump(dizin, f, ensure_ascii=False, indent=1)
