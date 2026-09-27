@@ -1,0 +1,22 @@
+# Örüntü konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+
+# Örüntü — soru görseli (nedir bölümü ve 2. slayt)
+3 mantik-muhakeme/oruntu oruntu-medium-069
+# Örüntü — çözümlü örnekler
+1 mantik-muhakeme/oruntu oruntu-medium-163
+1 mantik-muhakeme/oruntu oruntu-medium-078
+1 mantik-muhakeme/oruntu oruntu-easy-028
+2 mantik-muhakeme/oruntu oruntu-easy-043
+3 mantik-muhakeme/oruntu oruntu-medium-037
+3 mantik-muhakeme/oruntu oruntu-medium-056
+2 mantik-muhakeme/oruntu oruntu-hard-016
+# Örüntü — alıştırma
+3 mantik-muhakeme/oruntu oruntu-easy-006
+1 mantik-muhakeme/oruntu oruntu-medium-169
+1 mantik-muhakeme/oruntu oruntu-medium-129
+2 mantik-muhakeme/oruntu oruntu-medium-025
+3 mantik-muhakeme/oruntu oruntu-medium-047
+2 mantik-muhakeme/oruntu oruntu-medium-055
+2 mantik-muhakeme/oruntu oruntu-medium-146
+3 mantik-muhakeme/oruntu oruntu-medium-016

@@ -1,0 +1,21 @@
+# Gölge bulma konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp (siluetler büyütülüp piksel farkıyla karşılaştırılarak) cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Aynı kimlik her sınıfta aynı görseli kullandığı için her kimlik yalnız bir sınıftan seçildi.
+
+# Gölge bulma — çözümlü örnekler (+ 1-golge-medium-014 soru görseli olarak da kullanılıyor)
+1 gorsel-yetenek/golge-bulma golge-easy-084
+2 gorsel-yetenek/golge-bulma golge-easy-075
+3 gorsel-yetenek/golge-bulma golge-easy-005
+1 gorsel-yetenek/golge-bulma golge-medium-014
+1 gorsel-yetenek/golge-bulma golge-medium-043
+1 gorsel-yetenek/golge-bulma golge-hard-013
+1 gorsel-yetenek/golge-bulma golge-hard-029
+# Gölge bulma — alıştırma
+2 gorsel-yetenek/golge-bulma golge-easy-007
+3 gorsel-yetenek/golge-bulma golge-easy-085
+1 gorsel-yetenek/golge-bulma golge-easy-061
+3 gorsel-yetenek/golge-bulma golge-easy-043
+1 gorsel-yetenek/golge-bulma golge-medium-027
+3 gorsel-yetenek/golge-bulma golge-medium-096
+1 gorsel-yetenek/golge-bulma golge-medium-004
+1 gorsel-yetenek/golge-bulma golge-medium-035

@@ -1,0 +1,22 @@
+# Matris konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+
+# Matris — soru görseli (nedir bölümü ve 2. slayt)
+2 mantik-muhakeme/matris matris-hard-022
+# Matris — çözümlü örnekler
+1 mantik-muhakeme/matris matris-easy-160
+2 mantik-muhakeme/matris matris-medium-177
+2 mantik-muhakeme/matris matris-medium-173
+3 mantik-muhakeme/matris matris-medium-019
+1 mantik-muhakeme/matris matris-medium-031
+2 mantik-muhakeme/matris matris-medium-056
+3 mantik-muhakeme/matris matris-hard-043
+# Matris — alıştırma
+1 mantik-muhakeme/matris matris-easy-052
+1 mantik-muhakeme/matris matris-medium-126
+2 mantik-muhakeme/matris matris-easy-049
+3 mantik-muhakeme/matris matris-easy-015
+3 mantik-muhakeme/matris matris-medium-023
+2 mantik-muhakeme/matris matris-hard-062
+3 mantik-muhakeme/matris matris-hard-178
+3 mantik-muhakeme/matris matris-medium-054

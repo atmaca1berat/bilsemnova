@@ -1,0 +1,21 @@
+# Kuş bakışı konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Kuş bakışı — nedir görseli
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test01-q02
+# Kuş bakışı — çözümlü örnekler
+1 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test01-q01
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-medium-test01-q01
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-hard-test01-q04
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-hard-test01-q01
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-medium-test01-q14
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test01-q08
+1 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-hard-test01-q02
+# Kuş bakışı — alıştırma
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test05-q06
+1 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test01-q09
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-easy-test01-q03
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-medium-test01-q05
+2 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-medium-test01-q10
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-medium-test01-q07
+1 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-hard-test01-q06
+3 gorsel-yetenek/kusbakisi-perspektif kus-bakisi-hard-test01-q12

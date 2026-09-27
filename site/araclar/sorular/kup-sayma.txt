@@ -1,0 +1,19 @@
+# Küp konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Küp — nedir görseli + çözümlü örnekler
+3 gorsel-yetenek/kup-sayma kup-medium-016
+1 gorsel-yetenek/kup-sayma kup-easy-144
+2 gorsel-yetenek/kup-sayma kup-hard-112
+3 gorsel-yetenek/kup-sayma kup-hard-075
+2 gorsel-yetenek/kup-sayma kup-medium-109
+2 gorsel-yetenek/kup-sayma kup-medium-009
+1 gorsel-yetenek/kup-sayma kup-hard-029
+3 gorsel-yetenek/kup-sayma kup-medium-125
+# Küp — alıştırma (3 kup-medium-016 yukarıda)
+1 gorsel-yetenek/kup-sayma kup-easy-120
+3 gorsel-yetenek/kup-sayma kup-medium-026
+2 gorsel-yetenek/kup-sayma kup-medium-005
+2 gorsel-yetenek/kup-sayma kup-easy-087
+1 gorsel-yetenek/kup-sayma kup-easy-068
+3 gorsel-yetenek/kup-sayma kup-hard-055
+3 gorsel-yetenek/kup-sayma kup-hard-074

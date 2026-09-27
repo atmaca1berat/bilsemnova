@@ -1,0 +1,21 @@
+# Labirent konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp (yol gözle izlenip, duvarlardan kurulan ızgarada yol aranarak) cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Labirent soruları yalnız 1. sınıf bankasında var.
+
+# Labirent — çözümlü örnekler (+ 1-lab-easy-002 soru görseli olarak da kullanılıyor)
+1 gorsel-yetenek/labirent lab-easy-002
+1 gorsel-yetenek/labirent lab-easy-010
+1 gorsel-yetenek/labirent lab-medium-016
+1 gorsel-yetenek/labirent lab-medium-009
+1 gorsel-yetenek/labirent lab-hard-029
+1 gorsel-yetenek/labirent lab-hard-019
+1 gorsel-yetenek/labirent lab-hard-024
+# Labirent — alıştırma
+1 gorsel-yetenek/labirent lab-easy-021
+1 gorsel-yetenek/labirent lab-easy-029
+1 gorsel-yetenek/labirent lab-easy-004
+1 gorsel-yetenek/labirent lab-medium-012
+1 gorsel-yetenek/labirent lab-medium-020
+1 gorsel-yetenek/labirent lab-medium-004
+1 gorsel-yetenek/labirent lab-hard-026
+1 gorsel-yetenek/labirent lab-hard-015

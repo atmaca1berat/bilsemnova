@@ -1,0 +1,19 @@
+# Kısa süreli hafıza — giriş görseli (nedir bölümü ve ilk slayt)
+2 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test02-q06
+# Kısa süreli hafıza — çözümlü örnekler (hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı, 27 Eylül 2026)
+1 dikkat-hafiza/kisa-sureli-hafiza hafiza-easy-test02-q10
+2 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test03-q07
+3 dikkat-hafiza/kisa-sureli-hafiza hafiza-hard-test02-q04
+2 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test01-q09
+3 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test04-q10
+1 dikkat-hafiza/kisa-sureli-hafiza hafiza-hard-test06-q08
+3 dikkat-hafiza/kisa-sureli-hafiza hafsahne-hard-047
+# Kısa süreli hafıza — alıştırma
+1 dikkat-hafiza/kisa-sureli-hafiza hafsahne-easy-029
+1 dikkat-hafiza/kisa-sureli-hafiza hafsahne-medium-060
+2 dikkat-hafiza/kisa-sureli-hafiza hafsahne-hard-040
+3 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test05-q04
+3 dikkat-hafiza/kisa-sureli-hafiza hafiza-easy-test05-q10
+1 dikkat-hafiza/kisa-sureli-hafiza hafiza-hard-test07-q15
+2 dikkat-hafiza/kisa-sureli-hafiza hafiza-medium-test04-q05
+2 dikkat-hafiza/kisa-sureli-hafiza hafiza-easy-test07-q05

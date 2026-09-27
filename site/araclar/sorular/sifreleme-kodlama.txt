@@ -1,0 +1,24 @@
+# Şifreleme ve kodlama konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Aynı kimlik 1, 2 ve 3. sınıfta aynı görseli kullanır; her kimlik yalnız bir sınıftan alındı.
+# Sembol dizili şıklar yalnız 1. sınıftan (3 şık): 4 şıklı sürümlerde semboller telefonda çok küçük.
+
+# Soru nasıl görünür (sorugorsel + slayt)
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-027
+# Çözümlü örnekler
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-001
+2 mantik-muhakeme/sifreleme-kodlama sifre-medium-012
+3 mantik-muhakeme/sifreleme-kodlama sifre-hard-001
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-068
+1 mantik-muhakeme/sifreleme-kodlama sifre-medium-001
+2 mantik-muhakeme/sifreleme-kodlama sifre-medium-007
+3 mantik-muhakeme/sifreleme-kodlama sifre-medium-025
+# Alıştırmalar
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-014
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-007
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-004
+1 mantik-muhakeme/sifreleme-kodlama sifre-easy-002
+2 mantik-muhakeme/sifreleme-kodlama sifre-hard-030
+2 mantik-muhakeme/sifreleme-kodlama sifre-medium-014
+3 mantik-muhakeme/sifreleme-kodlama sifre-hard-012
+3 mantik-muhakeme/sifreleme-kodlama sifre-hard-016

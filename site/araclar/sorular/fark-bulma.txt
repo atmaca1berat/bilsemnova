@@ -1,0 +1,17 @@
+# Fark bulma — çözümlü örnekler (farklar iki panel piksel piksel ve nesne nesne karşılaştırılarak sayıldı, anahtarla karşılaştırıldı, 27 Eylül 2026)
+1 dikkat-hafiza/fark-bulma fark-easy-001
+2 dikkat-hafiza/fark-bulma fark-easy-021
+1 dikkat-hafiza/fark-bulma fark-medium-030
+2 dikkat-hafiza/fark-bulma fark-medium-008
+3 dikkat-hafiza/fark-bulma fark-hard-049
+3 dikkat-hafiza/fark-bulma fark-hard-027
+2 dikkat-hafiza/fark-bulma fark-hard-048
+# Fark bulma — alıştırma
+1 dikkat-hafiza/fark-bulma fark-easy-038
+2 dikkat-hafiza/fark-bulma fark-easy-013
+3 dikkat-hafiza/fark-bulma fark-easy-033
+2 dikkat-hafiza/fark-bulma fark-medium-041
+3 dikkat-hafiza/fark-bulma fark-medium-051
+1 dikkat-hafiza/fark-bulma fark-hard-011
+2 dikkat-hafiza/fark-bulma fark-hard-041
+3 dikkat-hafiza/fark-bulma fark-hard-052

@@ -1,0 +1,21 @@
+# Olay Sıralama konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Sahneler üç sınıfta ortak olduğundan sosyal medyada ayrılmış sahnelerin kimlikleri hiçbir sınıfta kullanılmadı.
+
+# Olay sıralama — çözümlü örnekler
+1 mantik-muhakeme/olay-siralama olay-easy-002
+2 mantik-muhakeme/olay-siralama olay-easy-004
+3 mantik-muhakeme/olay-siralama olay-medium-015
+1 mantik-muhakeme/olay-siralama olay-medium-012
+2 mantik-muhakeme/olay-siralama olay-hard-013
+3 mantik-muhakeme/olay-siralama olay-hard-007
+1 mantik-muhakeme/olay-siralama olay-hard-025
+# Olay sıralama — alıştırma ("Soru nedir" görseli: 1 olay-easy-001)
+1 mantik-muhakeme/olay-siralama olay-easy-001
+2 mantik-muhakeme/olay-siralama olay-medium-006
+3 mantik-muhakeme/olay-siralama olay-easy-021
+2 mantik-muhakeme/olay-siralama olay-medium-011
+3 mantik-muhakeme/olay-siralama olay-medium-004
+1 mantik-muhakeme/olay-siralama olay-easy-016
+3 mantik-muhakeme/olay-siralama olay-hard-012
+2 mantik-muhakeme/olay-siralama olay-hard-009

@@ -4,7 +4,9 @@ import Magazalar from '../components/Magazalar.astro';
 import { SAYILAR, SITE } from '../data/site';
 import { TUM_KATEGORILER } from '../data/kategoriler';
 
-const vitrin = ['kagit-katlama', 'matris', 'oruntu', 'kup-sayma'].map((s) => TUM_KATEGORILER.find((k) => k.slug === s)!);
+// Ana sayfada öne çıkan 8 konu (hazır olmayan varsa "Yakında" görünür).
+const vitrin = ['kagit-katlama', 'matris', 'oruntu', 'kup-sayma', 'yansima-simetri', 'kusbakisi-perspektif', 'golge-bulma', 'dikkat-sorulari']
+  .map((s) => TUM_KATEGORILER.find((k) => k.slug === s)!);
 
 const ozellikler = [
   {
@@ -146,7 +148,7 @@ const yapilandirilmis = {
     <div class="bolum-bas">
       <span class="cip yesil">ÜCRETSİZ</span>
       <h2>Konu anlatımları</h2>
-      <p>Her soru türü için kurallar, adım adım çözülmüş örnekler ve alıştırmalar. Web'de okuyun, slayt olarak açın ya da PDF indirin.</p>
+      <p>{SAYILAR.kategori} soru türünün her biri için kurallar, adım adım çözülmüş örnekler ve alıştırmalar. Web'de okuyun, slayt olarak açın ya da PDF indirin.</p>
     </div>
     <div class="konu-kartlar">
       {vitrin.map((k) => (

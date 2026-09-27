@@ -1,0 +1,23 @@
+# Mantık terazisi konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Aynı kimlik 1, 2 ve 3. sınıfta aynı görseli kullanır; her kimlik yalnız bir sınıftan alındı.
+
+# Soru nasıl görünür (sorugorsel + slayt)
+2 mantik-muhakeme/mantik-terazi terazi-medium-008
+# Çözümlü örnekler
+1 mantik-muhakeme/mantik-terazi terazi-easy-008
+1 mantik-muhakeme/mantik-terazi terazi-easy-012
+2 mantik-muhakeme/mantik-terazi terazi-medium-087
+2 mantik-muhakeme/mantik-terazi terazi-medium-020
+3 mantik-muhakeme/mantik-terazi terazi-hard-042
+1 mantik-muhakeme/mantik-terazi terazi-easy-048
+3 mantik-muhakeme/mantik-terazi terazi-hard-074
+# Alıştırmalar
+1 mantik-muhakeme/mantik-terazi terazi-easy-019
+1 mantik-muhakeme/mantik-terazi terazi-easy-092
+1 mantik-muhakeme/mantik-terazi terazi-easy-002
+1 mantik-muhakeme/mantik-terazi terazi-easy-030
+2 mantik-muhakeme/mantik-terazi terazi-medium-057
+2 mantik-muhakeme/mantik-terazi terazi-medium-036
+3 mantik-muhakeme/mantik-terazi terazi-hard-032
+3 mantik-muhakeme/mantik-terazi terazi-hard-066

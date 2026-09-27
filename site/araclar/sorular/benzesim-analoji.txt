@@ -1,0 +1,21 @@
+# Benzeşim (Analoji) konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+
+# Benzeşim — "Soru nedir" görseli (aynı zamanda alıştırma 3)
+2 mantik-muhakeme/benzesim-analoji benzesim-easy-test04-q02
+# Benzeşim — çözümlü örnekler
+1 mantik-muhakeme/benzesim-analoji benzesim-easy-test01-q03
+1 mantik-muhakeme/benzesim-analoji benzesim-easy-test02-q06
+3 mantik-muhakeme/benzesim-analoji benzesim-easy-test01-q13
+2 mantik-muhakeme/benzesim-analoji benzesim-easy-test05-q11
+3 mantik-muhakeme/benzesim-analoji benzesim-hard-test02-q01
+2 mantik-muhakeme/benzesim-analoji benzesim-hard-test07-q10
+2 mantik-muhakeme/benzesim-analoji benzesim-hard-test01-q02
+# Benzeşim — alıştırma
+1 mantik-muhakeme/benzesim-analoji benzesim-easy-test05-q05
+1 mantik-muhakeme/benzesim-analoji benzesim-easy-test07-q15
+2 mantik-muhakeme/benzesim-analoji benzesim-medium-test05-q02
+3 mantik-muhakeme/benzesim-analoji benzesim-hard-test03-q06
+3 mantik-muhakeme/benzesim-analoji benzesim-medium-test06-q12
+3 mantik-muhakeme/benzesim-analoji benzesim-hard-test06-q06
+3 mantik-muhakeme/benzesim-analoji benzesim-hard-test03-q03

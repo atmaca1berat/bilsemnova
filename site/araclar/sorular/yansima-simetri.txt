@@ -1,0 +1,17 @@
+# Yansıma ve Simetri konu anlatımında kullanılan sorular (sorugörsel, örnekler, alıştırmalar)
+2 gorsel-yetenek/yansima-simetri yansima-easy-051
+1 gorsel-yetenek/yansima-simetri yansima-easy-004
+2 gorsel-yetenek/yansima-simetri yansima-easy-013
+1 gorsel-yetenek/yansima-simetri yansima-medium-046
+2 gorsel-yetenek/yansima-simetri yansima-medium-030
+3 gorsel-yetenek/yansima-simetri yansima-medium-099
+3 gorsel-yetenek/yansima-simetri yansima-hard-020
+1 gorsel-yetenek/yansima-simetri yansima-hard-072
+1 gorsel-yetenek/yansima-simetri yansima-easy-055
+3 gorsel-yetenek/yansima-simetri yansima-easy-016
+2 gorsel-yetenek/yansima-simetri yansima-medium-078
+3 gorsel-yetenek/yansima-simetri yansima-medium-096
+1 gorsel-yetenek/yansima-simetri yansima-medium-050
+2 gorsel-yetenek/yansima-simetri yansima-easy-048
+2 gorsel-yetenek/yansima-simetri yansima-hard-027
+1 gorsel-yetenek/yansima-simetri yansima-hard-063
