@@ -1,0 +1,23 @@
+# Dikkat soruları konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Sahne soruları bilerek 1. sınıf sürümlerinden seçildi (2-3. sınıf sürümlerinde 4. şık bazen süs öğesi).
+
+# Dikkat soruları — soru görseli (nedir bölümü ve 2. slayt)
+1 dikkat-hafiza/dikkat-sorulari sahne-medium-020
+# Dikkat soruları — çözümlü örnekler
+2 dikkat-hafiza/dikkat-sorulari dikkat-medium-test01-q07
+1 dikkat-hafiza/dikkat-sorulari dikkat-medium-test04-q10
+3 dikkat-hafiza/dikkat-sorulari dikkat-hard-test02-q04
+1 dikkat-hafiza/dikkat-sorulari sahne-medium-027
+1 dikkat-hafiza/dikkat-sorulari sahne-medium-017
+1 dikkat-hafiza/dikkat-sorulari sahne-medium-028
+2 dikkat-hafiza/dikkat-sorulari dikkat-medium-test03-q13
+# Dikkat soruları — alıştırma
+3 dikkat-hafiza/dikkat-sorulari dikkat-easy-test06-q06
+1 dikkat-hafiza/dikkat-sorulari sahne-easy-026
+1 dikkat-hafiza/dikkat-sorulari sahne-easy-018
+1 dikkat-hafiza/dikkat-sorulari sahne-easy-034
+2 dikkat-hafiza/dikkat-sorulari dikkat-medium-test02-q03
+1 dikkat-hafiza/dikkat-sorulari sahne-medium-024
+2 dikkat-hafiza/dikkat-sorulari dikkat-medium-test05-q10
+3 dikkat-hafiza/dikkat-sorulari dikkat-hard-test07-q08

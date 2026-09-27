@@ -1,0 +1,23 @@
+# Hangisi farklı konu anlatımında kullanılan sorular: "sınıf kategori soru-id"
+# Hepsi görselden bağımsız çözülüp cevap anahtarıyla karşılaştırıldı (27 Eylül 2026).
+# Bu türde yalnız 1. sınıf bankası var; birden fazla kuralla açıklanabilen sorular kullanılmadı.
+
+# Hangisi farklı — soru görseli (nedir bölümü ve 2. slayt)
+1 dikkat-hafiza/hangisi-farkli hangisi-medium-test01-q14
+# Hangisi farklı — çözümlü örnekler
+1 dikkat-hafiza/hangisi-farkli hangisi-medium-test01-q07
+1 dikkat-hafiza/hangisi-farkli hangisi-medium-test04-q11
+1 dikkat-hafiza/hangisi-farkli hangisi-easy-test03-q02
+1 dikkat-hafiza/hangisi-farkli hangisi-hard-test06-q14
+1 dikkat-hafiza/hangisi-farkli hfarkli-medium-010
+1 dikkat-hafiza/hangisi-farkli hfarkli-medium-040
+1 dikkat-hafiza/hangisi-farkli esbul-hard-001
+# Hangisi farklı — alıştırma
+1 dikkat-hafiza/hangisi-farkli hfarkli-easy-009
+1 dikkat-hafiza/hangisi-farkli hangisi-easy-test04-q12
+1 dikkat-hafiza/hangisi-farkli hangisi-medium-test03-q07
+1 dikkat-hafiza/hangisi-farkli hangisi-easy-test06-q02
+1 dikkat-hafiza/hangisi-farkli hangisi-medium-test07-q12
+1 dikkat-hafiza/hangisi-farkli hfarkli-medium-031
+1 dikkat-hafiza/hangisi-farkli esbul-medium-013
+1 dikkat-hafiza/hangisi-farkli hfarkli-hard-007
