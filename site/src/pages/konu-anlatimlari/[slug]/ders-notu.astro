@@ -103,7 +103,7 @@ const alistirmalar = konu.bolumler.flatMap((b) => b.bloklar).flatMap((b) => (b.t
     .not :global(.gorsel-kare .soru-gorsel) { max-height: 250px !important; }
     .not :global(.gorsel-dik .soru-gorsel) { max-height: 500px !important; }
     .not :global(.siklar) { width: 70%; justify-self: center; gap: 8px; }
-    .not :global(.sik) { padding: 16px 6px 6px; border-radius: 10px; }
+    .not :global(.siklar .sik) { --ust: 16px; --yan: 6px; border-radius: 10px; }
     .not :global(.cozum-ic) { padding: 10px 14px; gap: 8px; }
     .not :global(.adimlar) { font-size: 10pt; gap: 4px; line-height: 1.5; }
     .not :global(.eleme) { font-size: 10pt; padding: 8px 12px; }
