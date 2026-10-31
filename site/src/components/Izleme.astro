@@ -52,7 +52,7 @@ import { SITE } from '../data/site';
       }
     });
 
-    // Reklamdan gelen ziyaretçinin kaynağını Google Play bağlantısına taşı (oturum boyunca).
+    // Reklamdan gelen ziyaretçinin kaynağını mağaza bağlantılarına taşı (oturum boyunca).
     function sade(x) { return String(x || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); }
     var q = new URLSearchParams(location.search);
     var kampanya = null;
@@ -66,6 +66,10 @@ import { SITE } from '../data/site';
       var referrer = encodeURIComponent('utm_source=' + kampanya.k + '&utm_medium=' + kampanya.t + '&utm_campaign=' + kampanya.c);
       document.querySelectorAll('a[href*="play.google.com"]').forEach(function (a) {
         a.href = 'https://play.google.com/store/apps/details?id=com.bilsemnova.app&referrer=' + referrer;
+      });
+      // pt: App Store Connect sağlayıcı kodu (hesapta sabit); ct: kampanya adı (Apple en çok 30 karakter alır).
+      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
+        a.href = 'https://apps.apple.com/app/apple-store/id6792328680?pt=129042374&ct=' + kampanya.c.slice(0, 30) + '&mt=8';
       });
     }
   })();
