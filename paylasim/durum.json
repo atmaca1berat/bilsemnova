@@ -2437,6 +2437,21 @@
       "zaman": "2026-11-14T20:01:19+03:00"
     }
   },
+  "2026-11-15-akis": {
+    "facebook": {
+      "deneme": 1,
+      "durum": "tamam",
+      "medya_id": "1386292477893625_122126750061445391",
+      "zaman": "2026-11-15T11:01:21+03:00"
+    },
+    "instagram": {
+      "deneme": 1,
+      "durum": "tekrar",
+      "konteyner": "18176762260487029",
+      "son_hata": "HTTP 400: Media ID is not available (kod 9007, alt kod 2207027)",
+      "zaman": "2026-11-15T11:01:13+03:00"
+    }
+  },
   "2026-11-15-hikaye-1": {
     "facebook": {
       "deneme": 1,
