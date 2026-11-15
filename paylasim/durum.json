@@ -2445,11 +2445,11 @@
       "zaman": "2026-11-15T11:01:21+03:00"
     },
     "instagram": {
-      "deneme": 1,
-      "durum": "tekrar",
+      "deneme": 2,
+      "durum": "tamam",
       "konteyner": "18176762260487029",
-      "son_hata": "HTTP 400: Media ID is not available (kod 9007, alt kod 2207027)",
-      "zaman": "2026-11-15T11:01:13+03:00"
+      "medya_id": "17940427293127671",
+      "zaman": "2026-11-15T11:15:40+03:00"
     }
   },
   "2026-11-15-hikaye-1": {
